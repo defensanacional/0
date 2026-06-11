@@ -1,0 +1,1809 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+<meta charset="utf-8" />
+<link rel="canonical" href="equipos.html" />
+<meta name="robots" content="index, follow" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<title>Máquinas de café para negocio en México | Nestlé Professional</title>
+<style>
+    #cart {font-size: 22px;
+  position: fixed;
+  top: 90px;
+  right: 10px;
+  background: none; /* Quitamos el fondo blanco */
+  border: none; /* Quitamos el borde */
+  padding: 0;
+  width: auto; /* Hacemos que se ajuste al contenido */
+  z-index: 999;
+  box-shadow: none; /* Sin sombra */
+  cursor: pointer;
+}
+#cart-details {
+  font-size: 22px;
+  color: black;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 270px;
+  margin-top: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  position: absolute;
+  right: 0;
+}
+    #cart-items img {
+  width: 29px;
+  height: 29px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+    #cart-items {
+      max-height: 200px;
+      overflow-y: auto;
+      padding-left: 20px;
+    }
+    #cart button {
+      margin-top: 10px;
+    }
+.add-to-cart {
+     background: linear-gradient(180deg, #0b5cab 0%, #004987 50%, #003a70 100%);;
+  color: white;
+  font-size: 1rem;
+  padding: 2px 6px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+.add-to-cart:hover {
+  background-color: #218838;
+}
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .product-container {
+    flex-direction: column;
+  }  
+  .product-image img {
+    width: 100%;
+    height: auto;
+  }
+  .product-details {
+    width: 100%;
+  }
+}
+.kilo-select {
+  display: block;
+  margin: 0 auto;
+}
+.kilo-select {
+  padding: 5px 10px;
+  border: 1px solid #28a745; /* verde Bootstrap */
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #f8f9fa; /* gris claro */
+  color: #212529;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  margin-bottom: 5px;
+}
+.kilo-select:focus {
+  border-color: #218838;
+  outline: none;
+  box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+  background-color: #fff;
+}
+#cart-details button {
+  font-size: 13px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Vaciar carrito */
+#cart-details button:first-child {
+  background: #6c757d;
+  color: white;
+}
+
+#cart-details button:first-child:hover {
+  background: #5a6268;
+}
+
+/* Finalizar compra */
+#cart-details button:last-child {
+  background: #e60023;
+  color: white;
+}
+
+#cart-details button:last-child:hover {
+  background: #b8001c;
+}
+</style>
+    <link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/themes/base/core.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/themes/base/controlgroup.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/themes/base/checkboxradio.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/themes/base/resizable.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/themes/base/button.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/themes/base/dialog.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/misc/components/progress.module.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/misc/components/ajax-progress.module.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/modules/system/css/components/align.module.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/modules/system/css/components/container-inline.module.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/modules/system/css/components/clearfix.module.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/modules/system/css/components/hidden.module.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/modules/system/css/components/item-list.module.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/modules/system/css/components/js.module.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/modules/system/css/components/position-container.module.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/modules/system/css/components/reset-appearance.module.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/blazy/css/blazy.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/modules/ckeditor5/css/ckeditor5.dialog.fix.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/responsive_tables_filter/css/tablesaw-base.css?tg02e2" />
+<link rel="stylesheet" media="screen" href="https://www.nestleprofessional.com.mx/modules/contrib/responsive_tables_filter/css/tablesaw-responsive.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/responsive_tables_filter/css/tables.columntoggle.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/responsive_tables_filter/css/customizations.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/modules/views/css/views.module.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/themes/base/theme.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/better_exposed_filters/css/better_exposed_filters.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/dsu_c_core/css/dsu_c_core.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/dsu_product/assets/css/dsu-product-ui.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/extlink/css/extlink.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/flag/css/flag-link-ajax.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/custom/np_gin/dist/css/np_gin.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/libraries/accessible360--accessible-slick/slick/slick.min.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/libraries/accessible360--accessible-slick/slick/slick-theme.min.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/paragraphs/css/paragraphs.unpublished.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/views_filters_summary/css/views_filters_summary.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/variables.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/user.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/progress.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/form.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/affix.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/book.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/contextual.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/feed-icon.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/field.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/header.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/help.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/icons.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/image-button.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/item-list.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/list-group.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/media.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/page.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/search-form.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/shortcut.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/sidebar.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/site-footer.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/skip-link.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/table.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/tabledrag.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/tableselect.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/tablesort-indicator.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/ui.widget.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/tabs.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/toolbar.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/vertical-tabs.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/views.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/webform.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/ui-dialog.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/components/menu_columns/menu_columns.css?tg02e2" />
+<link rel="stylesheet" media="print" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/print.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/paragraph/component--brand-logos.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/paragraph/component--hero-small.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/np_base.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/layout/header/header.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/navigation/navbar-top.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/navigation/navbar-main.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/block/block-np-login.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/block/block-cp-custom-login-block.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/block/block-block-main-navigation.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/block/block--system-branding-block.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/layout/footer/site-footer.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/block/block-footer-have-a-question.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/block/block-footer-contact.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/block/block-footer-faq-newsletter.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/block/block-footer-social-buttons.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/block/block-block-menu-footer.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/block/block-np-market-switcher.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/node/custom/np-product-teaser--action-buttons.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/node/node-product--teaser.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/misc/page-whatsapp.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/paragraph/paragraph-np-related-product.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/paragraph/paragraph--c-text.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/layout/header/quick-search.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/node/taxonomy-term.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/views/view-dsu-products-by-category.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/paragraph/paragraph--type--c-socialbuttons.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/themes/base/core.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/themes/base/controlgroup.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/themes/base/checkboxradio.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/themes/base/resizable.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/themes/base/button.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/themes/base/dialog.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/misc/components/progress.module.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/misc/components/ajax-progress.module.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/modules/system/css/components/align.module.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/modules/system/css/components/container-inline.module.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/modules/system/css/components/clearfix.module.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/modules/system/css/components/hidden.module.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/modules/system/css/components/item-list.module.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/modules/system/css/components/js.module.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/modules/system/css/components/position-container.module.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/modules/system/css/components/reset-appearance.module.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/blazy/css/blazy.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/blazy/css/components/blazy.loading.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/dsu_c_sideimagetext/css/dsu_c_sideimagetext.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/modules/ckeditor5/css/ckeditor5.dialog.fix.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/modules/filter/css/filter.caption.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/modules/media/css/filter.caption.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/responsive_tables_filter/css/tablesaw-base.css?tg02e2" />
+<link rel="stylesheet" media="screen" href="https://www.nestleprofessional.com.mx/modules/contrib/responsive_tables_filter/css/tablesaw-responsive.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/responsive_tables_filter/css/tables.columntoggle.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/responsive_tables_filter/css/customizations.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/themes/base/theme.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/better_exposed_filters/css/better_exposed_filters.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/dsu_c_core/css/dsu_c_core.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/dsu_product/assets/css/dsu-product-ui.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/extlink/css/extlink.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/flag/css/flag-link-ajax.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/custom/np_gin/dist/css/np_gin.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/libraries/accessible360--accessible-slick/slick/slick.min.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/libraries/accessible360--accessible-slick/slick/slick-theme.min.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/modules/contrib/paragraphs/css/paragraphs.unpublished.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/variables.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/user.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/progress.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/form.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/affix.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/book.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/contextual.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/feed-icon.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/field.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/header.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/help.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/icons.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/image-button.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/item-list.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/list-group.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/media.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/page.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/search-form.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/shortcut.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/sidebar.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/site-footer.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/skip-link.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/table.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/tabledrag.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/tableselect.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/tablesort-indicator.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/ui.widget.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/tabs.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/toolbar.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/vertical-tabs.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/views.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/webform.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/components/ui-dialog.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/components/menu_columns/menu_columns.css?tg02e2" />
+<link rel="stylesheet" media="print" href="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/css/print.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/paragraph/component--hero-small.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/np_base.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/layout/header/header.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/navigation/navbar-top.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/navigation/navbar-main.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/block/block-np-login.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/block/block-cp-custom-login-block.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/block/block-block-main-navigation.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/block/block--system-branding-block.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/layout/footer/site-footer.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/block/block-footer-have-a-question.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/block/block-footer-contact.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/block/block-footer-faq-newsletter.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/block/block-footer-social-buttons.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/block/block-block-menu-footer.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/block/block-np-market-switcher.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/node/node--brand--full.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/node/node-type-faq--teaser.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/node/custom/np-product-teaser--action-buttons.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/node/node-product--teaser.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/misc/page-whatsapp.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/paragraph/paragraph-np-related-product.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/paragraph/paragraph--c-text.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/layout/header/quick-search.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/paragraph/paragraph--type--c-socialbuttons.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/paragraph/paragraph--type--np-container.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/paragraph/paragraph--type--np-faq-accordion.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/paragraph/paragraph--type--c-generic-banner.css?tg02e2" />
+<link rel="stylesheet" media="all" href="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/css/03_layouts/paragraph/paragraph--type--c-generic-teaser.css?tg02e2" />
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/592","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"es-mx"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"eJx1VO2WqyAMfCHRR-IESJUtX0ug3d6n36DU2rr3Rz3JTEhgGKqwFMwSf1IkNPJiHac0zRgwgxuUg3-Paf32WDsgcpZKz10E08MU3YMbPFelHL0l7FmGS4_uqNKgYixUMiSpIGcbp0vM_ozOLipwgsrD2TCfeUavNGhnMRSyBuUNnDVQbAzy67ti5g3fxi0aO4eDjhknHX2Koa0bP9sK4TFUqaOrPtDAa8DBA_OkcIGbjZkxYl6ujZ5abVDbhfUwY8Gf8sGdIJbIVF0mjkWPB65pp5pMrgnc2NPh4mCe2mdsqYQv-BnmGGeHsjAz8-czH89Ffti0kAZTRs1i8J3XoJtgtKuts02FBhfk6-h79A7jrSk4eDQWps09o4bU-g0hScjFaodtsnBWZciPBuskK_HqLdSVSvTSxdkGqVzU11azz5DrjNaiVzaWSyf-HZvyQnCST2XTaeBT6A_47-KyvMwhxII5CvLAvt64kARovnnTz7hBmuiVrGbes68D4yFfsQi626K584FoCorVOQK9QmPQHNlQRWDvzVDexoZoUPDOgxGXetziSlzgWxQEOg5aia7HiUxt_H2BQpDSEc4w8_tYREbXTLO79Y-S5vIX_l2tvgpCyHrp6KtUC4rasuVULYUdeCpowsZQwIZ9l29kO-DnZbwVrK_NaqEg_KfFs6JLsXP0fIEvZKwhVcV_fgvfDT2ooJ8Urxruiaibk_2aYmbrrobtrvoF_TYXcg","theme":"np_th","theme_token":null},"ajaxTrustedUrl":{"\/search":true},"gtag":{"tagId":"","consentMode":false,"otherIds":[],"events":[],"additionalConfigInfo":[]},"gtm":{"tagId":null,"settings":{"hostname":"data-sa.nestleprofessional.com.mx","data_layer":"dataLayer","include_classes":false,"allowlist_classes":"","blocklist_classes":"","include_environment":false,"environment_id":"","environment_token":""},"tagIds":["GTM-WJBXKM"],"hostnames":{"GTM-WJBXKM":"data-sa.nestleprofessional.com.mx"}},"clientside_validation_jquery":{"validate_all_ajax_forms":2,"force_validate_on_blur":false,"force_html5_validation":false,"messages":{"required":"Este campo es obligatorio.","remote":"Please fix this field.","email":"Especifique una direcci\u00f3n de correo electr\u00f3nico v\u00e1lida, por favor.","url":"Please enter a valid URL.","date":"Please enter a valid date.","dateISO":"Please enter a valid date (ISO).","number":"Please enter a valid number.","digits":"Please enter only digits.","equalTo":"Please enter the same value again.","maxlength":"Please enter no more than {0} characters.","minlength":"Please enter at least {0} characters.","rangelength":"Please enter a value between {0} and {1} characters long.","range":"Please enter a value between {0} and {1}.","max":"Please enter a value less than or equal to {0}.","min":"Please enter a value greater than or equal to {0}.","step":"Please enter a multiple of {0}."}},"dataLayer":{"defaultLang":"es-mx","languages":{"es-mx":{"id":"es-mx","name":"Spanish (Mexico)","direction":"ltr","weight":-10},"en":{"id":"en","name":"English","direction":"ltr","weight":0},"es":{"id":"es","name":"Espa\u00f1ol","direction":"ltr","weight":1}}},"ln_datalayer":{"data":{"module_name":"Lightnest Data Layer","module_version":"4.0.1","content_id":"592","content_name":"M\u00e1quinas de caf\u00e9 para negocio","content_type":"brand"}},"np_datalayer_event":[],"data":{"extlink":{"extTarget":true,"extTargetAppendNewWindowLabel":"(opens in a new window)","extTargetNoOverride":true,"extNofollow":true,"extTitleNoOverride":false,"extNoreferrer":true,"extFollowNoOverride":true,"extClass":"0","extLabel":"(link is external)","extImgClass":false,"extSubdomains":true,"extExclude":"","extInclude":"","extCssExclude":"","extCssInclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","extHideIcons":false,"mailtoClass":"0","telClass":"","mailtoLabel":"(link sends email)","telLabel":"(link is a phone number)","extUseFontAwesome":false,"extIconPlacement":"append","extPreventOrphan":false,"extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","extAdditionalLinkClasses":"","extAdditionalMailtoClasses":"","extAdditionalTelClasses":"","extFaTelClasses":"fa fa-phone","whitelistedDomains":[],"extExcludeNoreferrer":""}},"blazy":{"loadInvisible":false,"offset":100,"saveViewportOffsetDelay":50,"validateDelay":25,"container":"","loader":true,"unblazy":false,"visibleClass":false},"blazyIo":{"disconnect":false,"rootMargin":"0px","threshold":[0,0.25,0.5,0.75,1]},"components":{"c_sideimagetext":{"13766":{"entityId":"13766","entityType":"c_sideimagetext"},"13739":{"entityId":"13739","entityType":"c_sideimagetext"},"15835":{"entityId":"15835","entityType":"c_sideimagetext"},"15834":{"entityId":"15834","entityType":"c_sideimagetext"},"15833":{"entityId":"15833","entityType":"c_sideimagetext"}},"np_column_container":{"13740":{"entityId":"13740","entityType":"np_column_container"},"15836":{"entityId":"15836","entityType":"np_column_container"}},"np_faq_accordion":{"15472":{"entityId":"15472","entityType":"np_faq_accordion"},"15471":{"entityId":"15471","entityType":"np_faq_accordion"}},"c_generic_banner":{"15470":{"entityId":"15470","entityType":"c_generic_banner"}},"np_related_product":{"14008":{"entityId":"14008","entityType":"np_related_product"},"9478":{"entityId":"9478","entityType":"np_related_product"}}},"cartUrls":{"update":"\/cp\/hybris\/cart\/update","removeEntry":"\/cp\/hybris\/cart\/remove-entry","removeAll":"\/cp\/hybris\/cart\/remove-all","deliveryAddress":"\/cp\/hybris\/checkout\/deliveryaddress","shipping":"\/cp\/hybris\/checkout\/shipping","placeOrder":"\/cp\/hybris\/checkout\/placeorder","delivery":"\/cp\/hybris\/checkout\/delivery"},"ajax":[],"user":{"uid":0,"permissionsHash":"2b1f30ab1ad306f253429e03a3cf685da704bdf90ef94e56309985325448d6de"}}</script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery/jquery.min.js?v=4.0.0-rc.1"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/jquery_deprecated_functions/js/jquery.deprecated.functions.js?v=1.x"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/drupalSettingsLoader.js?v=11.2.12"></script>
+
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/ln_datalayer/js/isMobile.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/ln_datalayer/js/ln_datalayer.js?tg02e2"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.nestleprofessional.com.mx/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.nestleprofessional.com.mx/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.nestleprofessional.com.mx/favicon-16x16.png">
+    <link rel="manifest" href="https://www.nestleprofessional.com.mx/site.webmanifest">
+    <link rel="mask-icon" href="https://www.nestleprofessional.com.mx/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body class="layout-no-sidebars page-node-592 np_core path-node node--type-brand">
+ 
+   
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div id="page-wrapper">
+    <div id="page">
+        <header id="header" class="header" role="banner" aria-label="Site header">
+                                                <nav class="navbar" id="navbar-top" aria-label="Secondary">
+                                                    
+                            
+    <section class="row region region-top-header">
+        <div class="header--top twb-grid-limited">
+            <div id="block-block-site-branding" data-block-plugin-id="system_branding_block" class="clearfix site-branding block block-system block-system-branding-block">
+  
+    
+        <a href="#" title="Home" rel="home" class="navbar-brand">
+              <img src="https://www.nestleprofessional.com.mx/themes/custom/np_th/logo.svg" alt="Home" class="site-logo img-fluid d-inline-block align-top" />
+          </a>
+    <div class="site-name">
+      Nestlé Professional
+    </div>
+    </div>
+
+
+            <div class="search-wrapper d-print-none">
+              <div class="views-exposed-form bef-exposed-form block block-views block-views-exposed-filter-blocknp-search-search-results" data-drupal-selector="views-exposed-form-np-search-search-results" data-block-plugin-id="views_exposed_filter_block:np_search-search_results">
+  
+    
+      <div class="content">
+      
+ 
+    </div>
+  </div>
+
+     
+     
+            </div>
+            <button class="mobile-burger" aria-label="Mobile Menu Button" aria-expanded="false">
+                <span class="burger-icon" id="burger-icon1">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="visually-hidden">Menu</span>
+            </button>
+        </div>
+    </section>
+
+                                                                            </nav>
+                                <nav class="navbar navbar-expand-xl" id="navbar-main" aria-label="Menú principal">
+                                            <div class="nav-container">
+                              
+<nav role="navigation" aria-labelledby="block-block-main-navigation-menu" id="block-block-main-navigation" data-block-plugin-id="system_menu_block:main" class="block block-menu navigation menu--main" data-toggle-submenu-text="Show submenu">
+                        
+    <div class="sr-only" id="block-block-main-navigation-menu">Main navigation menu</div>
+    
+
+                
+
+    <ul class="menu menu-level-0">
+                    
+        
+            
+                    
+            <li class="menu-item has-children">
+                <a href="#.html" data-drupal-link-system-path="taxonomy/term/1200">Máquinas Nescafé®</a>
+                                                    
+    
+    
+    <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-0 menu-type-default layout-33-33-33">
+        
+                    <button type="button" class="back-to-main">Menú principal</button>
+            <div class="dropdown-container">
+                
+      <div class="field field--name-field-pane-blocks field--type-entity-reference field--label-hidden field__items">
+              <div class="field__item"><div class="block-nav-link-links-wrapper">
+    
+      <ul class="field field--name-field-nav-link-links field--type-link field--label-hidden test-class field__items sub-item-list">
+                              <li class="field__item"><a href="index.html">Máquinas de café para negocios</a></li>
+                              <li class="field__item"><a href="insumos.html" rel="noreferrer">Insumos para máquinas de café</a></li>
+          </ul>
+  
+</div>
+</div>
+          </div>
+  
+            </div>
+            </div>
+
+
+
+                            </li>
+                    
+            
+                    
+            <li class="menu-item has-children">
+                <a href="#" data-drupal-link-system-path="node/811">Tendencias</a>
+                                                    
+    
+    
+    <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-0 menu-type-default layout-100">
+        
+                    <button type="button" class="back-to-main">Menú principal</button>
+            <div class="dropdown-container">
+                
+      <div class="field field--name-field-pane-blocks field--type-entity-reference field--label-hidden field__items">
+              <div class="field__item"><div class="block-nav-link-links-wrapper">
+    
+      <ul class="field field--name-field-nav-link-links field--type-link field--label-hidden test-class field__items sub-item-list">
+                              <li class="field__item"><a href="#">Artículos</a></li>
+          </ul>
+  
+</div>
+</div>
+              <div class="field__item"><div class="block-nav-link-links-wrapper">
+    
+      <ul class="field field--name-field-nav-link-links field--type-link field--label-hidden test-class field__items sub-item-list">
+                              <li class="field__item"><a href="ideas-alimentos-para-tu-menu.html">Ideas de Alimentos para tu menú</a></li>
+                              <li class="field__item"><a href="ideas-bebidas-para-tu-menu.html">Ideas de Bebidas para tu menú</a></li>
+                              <li class="field__item"><a href="guias-descargables.html">Guías descargables</a></li>
+          </ul>
+  
+</div>
+</div>
+          </div>
+  
+            </div>
+            </div>
+
+
+
+                            </li>
+                    
+            <li class="menu-item has-children">
+                <a href="#" data-drupal-link-system-path="node/709">Sobre Nosotros</a>
+                                                    
+    
+    
+    <div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-0 menu-type-default layout-100">
+        
+                    <button type="button" class="back-to-main">Menú principal</button>
+            <div class="dropdown-container">
+                
+      <div class="field field--name-field-pane-blocks field--type-entity-reference field--label-hidden field__items">
+              <div class="field__item"><div class="block-nav-link-links-wrapper">
+    
+      <ul class="field field--name-field-nav-link-links field--type-link field--label-hidden test-class field__items sub-item-list">
+                              <li class="field__item"><a href="sustentabilidad.html" rel="noreferrer">Sustentabilidad</a></li>
+                              <li class="field__item"><a href="nestle-jovenes-baristas.html" rel="noreferrer">Programa Nestlé Jóvenes Baristas</a></li>
+          </ul>
+  
+</div>
+</div>
+          </div>
+  
+            </div>
+            </div>
+
+
+
+                            </li>
+                    
+            <li class=" ">
+                <a href="contacto.html" >Contactanos</a>
+                  </li>
+            </ul>
+
+
+    </nav>
+
+
+                        </div>
+                                                                                        </nav>
+                    </header>
+                        <div id="main-wrapper" class="layout-main-wrapper clearfix">
+                          <div class="twb-grid-limited print-only">
+                <img src="https://www.nestleprofessional.com.mx/themes/custom/np_th/logo.svg" alt="Home" class="site-logo--print" />
+              </div>
+                <div id="main" class="container">
+                    
+                    <div class="row-offcanvas row-offcanvas-left clearfix">
+                        
+
+
+<main class="main-content order-last" id="content" role="main">
+                            <section class="section">
+                                <a id="main-content" tabindex="-1"></a>
+                                  <div data-drupal-messages-fallback class="hidden"></div><div id="block-main-page-content" data-block-plugin-id="system_main_block" class="block block-system block-system-main-block">
+  
+    
+      <div class="content">
+      
+<div id="taxonomy-term-1199" class="taxonomy-term vocabulary-dsu-category row">
+    
+    
+        <div class="header-content">
+                    <div class="category--hero-small">
+                
+    <div class="taxonomy-term vocabulary-dsu-category component--hero-small image-right twb-grid-limited taxonomy-term-dsu-category has-no-cta">
+                    <div class="hero-small-wrapper-image">
+                
+            <div class="blazy blazy--nojs blazy--field blazy--field-media-image blazy--field-media-image---custom field field--name-field-media-image field--type-image field--label-hidden field__item" data-blazy="">    <div data-b-token="b-dc62011238a" class="media media--blazy media--image media--responsive">  <picture>
+                  <source srcset="https://www.nestleprofessional.com.mx/sites/default/files/styles/np_hero_small_big/public/2024-10/insumos-para-maquinas-granos-cafe.webp?itok=BwDGSOkJ 1x, /sites/default/files/styles/np_hero_small_big_2x/public/2024-10/insumos-para-maquinas-granos-cafe.webp?itok=8PXlurXn 2x" media="all and (min-width: 768px)" type="image/webp" width="540" height="405"/>
+              <source srcset="https://www.nestleprofessional.com.mx/sites/default/files/styles/np_hero_small_small/public/2024-10/insumos-para-maquinas-granos-cafe.webp?itok=P_eL6DLj 1x, /sites/default/files/styles/np_hero_small_small_2x/public/2024-10/insumos-para-maquinas-granos-cafe.webp?itok=mOMuTdHo 2x" media="all and (min-width: 415px)" type="image/webp" width="737" height="555"/>
+              <source srcset="https://www.nestleprofessional.com.mx/sites/default/files/styles/np_hero_small_extra_small/public/2024-10/insumos-para-maquinas-granos-cafe.webp?itok=uO96VF9Z 1x, /sites/default/files/styles/np_hero_small_extra_small_2x/public/2024-10/insumos-para-maquinas-granos-cafe.webp?itok=SHYcGODD 2x" media="all and (min-width: 0px)" type="image/webp" width="414" height="311"/>
+              <source srcset="https://www.nestleprofessional.com.mx/sites/default/files/styles/np_hero_small_big/public/2024-10/insumos-para-maquinas-granos-cafe.jpg?itok=BwDGSOkJ 1x, /sites/default/files/styles/np_hero_small_big_2x/public/2024-10/insumos-para-maquinas-granos-cafe.jpg?itok=8PXlurXn 2x" media="all and (min-width: 768px)" type="image/jpeg" width="540" height="405"/>
+              <source srcset="https://www.nestleprofessional.com.mx/sites/default/files/styles/np_hero_small_small/public/2024-10/insumos-para-maquinas-granos-cafe.jpg?itok=P_eL6DLj 1x, /sites/default/files/styles/np_hero_small_small_2x/public/2024-10/insumos-para-maquinas-granos-cafe.jpg?itok=mOMuTdHo 2x" media="all and (min-width: 415px)" type="image/jpeg" width="737" height="555"/>
+              <source srcset="https://www.nestleprofessional.com.mx/sites/default/files/styles/np_hero_small_extra_small/public/2024-10/insumos-para-maquinas-granos-cafe.jpg?itok=uO96VF9Z 1x, /sites/default/files/styles/np_hero_small_extra_small_2x/public/2024-10/insumos-para-maquinas-granos-cafe.jpg?itok=SHYcGODD 2x" media="all and (min-width: 0px)" type="image/jpeg" width="414" height="311"/>
+                        <img decoding="async" class="media__element" width="737" height="555" fetchpriority="high" src="https://www.nestleprofessional.com.mx/sites/default/files/styles/np_hero_small_small/public/2024-10/insumos-para-maquinas-granos-cafe.jpg?itok=P_eL6DLj" alt="Sobre una mesa de madera están regados un puñado de granos de café tostado" />
+
+      </picture>
+        </div>
+  </div>
+      
+                            </div>
+                <div class="hero-small-wrapper">
+            <div class="hero-small-content">
+                                <div class="hero-small-text">
+                    <div class="field-generic-teaser-title">
+                    <h1>Insumos para máquinas de café</h1>
+                    </div>
+                    <div  class="field field--name-description field--type-text-long field--label-hidden"><p>Encuentra todos los insumos para tus máquinas automáticas NESCAFÉ® que necesitas en esta sección para que tu operación sea completa.</p></div>
+
+                </div>
+                
+            </div>
+        </div>
+    </div>
+            </div>
+            </div>
+        <div class="content">
+        
+        
+  
+        
+      
+    
+    
+      
+  <div class="compatibility-mode paragraph paragraph--type--c-text paragraph--view-mode--default"
+      style="
+                                                                              "
+      >
+    <div class="twb-grid-limited ">
+                <article class="contextual-region dsu-component-page is-promoted full clearfix" role="article">
+        <div class="content twb-narrow">
+          <div class="field field--name-field-components field--type-entity-reference-revisions field--label-hidden field--items">
+            <div class="field--item">
+              <div class="paragraph paragraph--type--c-text paragraph--view-mode--default">
+
+                
+                
+                                  
+                
+                                  
+                
+                                  
+            <div class="clearfix text-formatted field field--name-field-c-text field--type-text-long field--label-hidden field__item"><p>La calidad de los insumos que utilizas para tu máquina de café automática y vending marca la diferencia en la experiencia de tus clientes.</p>
+
+<p>Desde café en grano hasta fórmulas especiales para equipos expendedores, cada ingrediente juega un papel crucial en el éxito de la operación de tu negocio.</p>
+
+<p>Exploremos todo lo que necesitas saber sobre nuestro portafolio de insumos y cómo pueden potenciar la operación de tu negocio.</p>
+
+<h2 class="text-align-center">Nuestros productos</h2></div>
+      
+                              </div>
+
+                          </div>
+          </div>
+        </div>
+
+        <span class="hidden table-nav-translation-next-col" data-table-nav-translation-next-col="Next column"></span>
+        <span class="hidden table-nav-translation-prev-col" data-table-nav-translation-prev-col="Previous column"></span>
+      </article>
+        </div>
+  </div>
+
+        <div class="views-element-container">
+
+<div class="view view-dsu-products-by-category view-id-dsu_products_by_category view-display-id-product_list_by_dsu_category_block js-view-dom-id-3939c53093694aa436bc53ff4fd657d56cbaa0a20bef6cd7cc09037f3dbecc0a">
+  <div class="live-info sr-only" aria-live="assertive"></div>
+  
+    
+
+              
+    <div class="selected twb-grid-limited">
+              
+          </div>
+      
+      <div class="view-content">
+      <div class="item-list">
+  
+  <ul>
+
+          <li>
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix"
+  data-product-id="000000000012403074"
+  data-product-name="NESTLÉ® Leche entera bolsa x 500 g"
+  data-product-price=""
+  data-product-currency=""
+  data-product-category=""
+  data-product-variant=""
+  data-product-index=""
+>
+  
+  <div class="product-teaser-wrapper-linked">
+          <div class="wishlist">
+        
+      </div>
+        
+    
+    
+        <div class="product-teaser-image-wrapper">
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://www.nestleprofessional.com.mx/sites/default/files/styles/np_product_teaser_2x/public/2025-01/bolsa-nestle-leche-entera-500g.png?itok=lH0_Je00" width="468" height="468" alt="Bolsa NESTLÉ® Leche entera bolsa x 500 g" class="image-style-np-product-teaser-2x" />
+
+
+</div>
+      
+    </div>
+    
+<div class="product-teaser-wrapper-content">
+      <h3 class="product__title">NESTLÉ® Leche entera caja 9 bolsas x 500 g -<b> $800</b></h3>
+
+  <div class="inline__links"><div class="links inline nav links-inline"><span class="node-readmore nav-link">
+
+
+<span class="btn-sm add-to-cart"
+      data-nombre="NESTLÉ® Leche entera caja 9 bolsas x 500 g"
+      data-modelo=""
+      data-precio="800"
+      data-imagen="leche-entera-500g.png">
+      Agregar
+</span>
+
+</div>
+  </div>
+
+</div>
+
+
+  </div>
+  </article>
+
+</li>
+          <li>
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix"
+  data-product-id="000000000012535701"
+  data-product-name="NESCAFÉ® Espresso Blend bolsa 1kg"
+  data-product-price=""
+  data-product-currency=""
+  data-product-category=""
+  data-product-variant=""
+  data-product-index=""
+>
+  
+  <div class="product-teaser-wrapper-linked">
+          <div class="wishlist">
+        
+      </div>
+        
+    
+    
+        <div class="product-teaser-image-wrapper">
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://www.nestleprofessional.com.mx/sites/default/files/styles/np_product_teaser_2x/public/2025-05/bolsa-nescafe-espresso-blend-1kg.png?itok=bCJETvsc" width="468" height="468" alt="Bolsa NESCAFÉ® Espresso Blend de 1kg" class="image-style-np-product-teaser-2x" />
+
+
+</div>
+      
+    </div>
+ <div class="product-teaser-wrapper-content">
+      <h3 class="product__title">NESCAFÉ® Espresso Blend bolsa 1kg - $359</h3>
+
+  <div class="inline__links"><div class="links inline nav links-inline">
+<span class="btn-sm add-to-cart"
+      data-nombre="NESCAFÉ® Espresso Blend bolsa 1kg"
+      data-modelo="1 kg"
+      data-precio="359"
+      data-imagen="espresso-blend-1kg.png">
+      Agregar
+</span>
+
+</div>
+  </div>
+
+</div>
+  </div>
+  </article>
+
+</li>
+          <li>
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix"
+  data-product-id="000000000012455949"
+  data-product-name="CARLOS V® para Máquina NESCAFÉ® caja x 4.5 kg"
+  data-product-price=""
+  data-product-currency=""
+  data-product-category=""
+  data-product-variant=""
+  data-product-index=""
+>
+  
+  <div class="product-teaser-wrapper-linked">
+          <div class="wishlist">
+        
+      </div>
+        
+    
+    
+        <div class="product-teaser-image-wrapper">
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://www.nestleprofessional.com.mx/sites/default/files/styles/np_product_teaser_2x/public/2025-03/7501058629951_A1N1.png?itok=bvB7BToS" width="468" height="468" alt="Bolsa de polvo para preparar bebida con leche sabor a chocolate Carlos V de 750 g para máquinas Nescafé" class="image-style-np-product-teaser-2x" />
+
+
+</div>
+      
+    </div>
+   <div class="product-teaser-wrapper-content">
+      <h3 class="product__title">CARLOS V® para Máquina NESCAFÉ® caja x 4.5 kg - $469</h3>
+
+  <div class="inline__links"><div class="links inline nav links-inline"> 
+                   
+
+<span class="btn-sm add-to-cart"
+      data-nombre="CARLOS V® para Máquina NESCAFÉ® caja x 4.5 kg"
+      data-modelo="4.5 kg"
+      data-precio="469"
+      data-imagen="carlos-v-45kg.png">
+      Agregar
+</span>
+
+</div>
+  </div>
+
+</div>
+  </div>
+  </article>
+
+</li>
+          <li>
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix"
+  data-product-id="000000000012396722"
+  data-product-name="NESCAFÉ® Cappuccino Original caja x 4.5kg"
+  data-product-price=""
+  data-product-currency=""
+  data-product-category=""
+  data-product-variant=""
+  data-product-index=""
+>
+  
+  <div class="product-teaser-wrapper-linked">
+          <div class="wishlist">
+        
+      </div>
+        
+    
+    
+        <div class="product-teaser-image-wrapper">
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://www.nestleprofessional.com.mx/sites/default/files/styles/np_product_teaser_2x/public/2025-03/Cappucino original.png?itok=NqWfQzMB" width="392" height="468" alt="Bolsa de Cappuccino Original Nescafé de 750 g" class="image-style-np-product-teaser-2x" />
+
+
+</div>
+      
+    </div>
+<div class="product-teaser-wrapper-content">
+      <h3 class="product__title">NESCAFÉ® Cappuccino Original caja x 4.5kg - $439</h3>
+
+  <div class="inline__links"><div class="links inline nav links-inline"><span class="node-readmore nav-link">
+                    
+
+<span class="btn-sm add-to-cart"
+      data-nombre="NESCAFÉ® Cappuccino Original caja x 4.5kg"
+      data-modelo="4.5 kg"
+      data-precio="439"
+      data-imagen="cappuccino-original-45kg.png">
+      Agregar
+</span>
+
+</div>
+  </div>
+
+</div>
+  </div>
+  </article>
+
+</li>
+          <li>
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix"
+  data-product-id="000000000012396704"
+  data-product-name="Nescafé® Cappuccino Vainilla caja x 4.5 kg"
+  data-product-price=""
+  data-product-currency=""
+  data-product-category=""
+  data-product-variant=""
+  data-product-index=""
+>
+  
+  <div class="product-teaser-wrapper-linked">
+          <div class="wishlist">
+        
+      </div>
+        
+    
+    
+        <div class="product-teaser-image-wrapper">
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://www.nestleprofessional.com.mx/sites/default/files/styles/np_product_teaser_2x/public/2025-03/7501058636980_A1N1.png?itok=tbeG2E0C" width="468" height="468" alt="Bolsa de Nescafé Cappuccino Vainilla de 750 g" class="image-style-np-product-teaser-2x" />
+
+
+</div>
+      
+    </div>
+<div class="product-teaser-wrapper-content">
+      <h3 class="product__title">Nescafé® Cappuccino Vainilla caja x 4.5 kg - $459</h3>
+
+  <div class="inline__links"><div class="links inline nav links-inline"><span class="node-readmore nav-link">
+                
+
+<span class="btn-sm add-to-cart"
+      data-nombre="Nescafé® Cappuccino Vainilla caja x 4.5 kg"
+      data-modelo="4.5 kg"
+      data-precio="459"
+      data-imagen="cappuccino-vainilla-45kg.png">
+      Agregar
+</span>
+
+</div>
+  </div>
+
+</div>
+  </div>
+  </article>
+
+</li>
+          <li>
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix"
+  data-product-id="000000000012578422"
+  data-product-name="NESCAFÉ® Vend Special Blend en lata x 1 Kg"
+  data-product-price=""
+  data-product-currency=""
+  data-product-category=""
+  data-product-variant=""
+  data-product-index=""
+>
+  
+  <div class="product-teaser-wrapper-linked">
+          <div class="wishlist">
+        
+      </div>
+        
+    
+    
+        <div class="product-teaser-image-wrapper">
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://www.nestleprofessional.com.mx/sites/default/files/styles/np_product_teaser_2x/public/2025-01/lata-nescafe-vend-special-blend-lata-1-kg.png?itok=-szboJn_" width="468" height="468" alt="Lata de NESCAFÉ® Vend Special Blend en lata x 1 Kg" class="image-style-np-product-teaser-2x" />
+
+
+</div>
+      
+    </div>
+  <div class="product-teaser-wrapper-content">
+      <h3 class="product__title">NESCAFÉ® Vend Special Blend en lata x 1 Kg - $429</h3>
+
+  <div class="inline__links"><div class="links inline nav links-inline"><span class="node-readmore nav-link">
+                   
+
+<span class="btn-sm add-to-cart"
+      data-nombre="NESCAFÉ® Vend Special Blend en lata x 1 Kg"
+      data-modelo="1 Kg"
+      data-precio="429"
+      data-imagen="vend-special-blend-1kg.png">
+      Agregar
+</span>
+
+</div>
+  </div>
+
+</div>
+  </div>
+  </article>
+
+</li>
+          <li>
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix"
+  data-product-id="000000000012381255"
+  data-product-name="Chocolate en polvo 4.5kg ABUELITA® para máquina vending"
+  data-product-price=""
+  data-product-currency=""
+  data-product-category=""
+  data-product-variant=""
+  data-product-index=""
+>
+  
+  <div class="product-teaser-wrapper-linked">
+          <div class="wishlist">
+        
+      </div>
+        
+    
+    
+        <div class="product-teaser-image-wrapper">
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://www.nestleprofessional.com.mx/sites/default/files/styles/np_product_teaser_2x/public/2025-03/Mx_SOLUCIONES_CHOCOLATE ABUELITA_750g_ 230623.png?itok=2k1LG1wS" width="392" height="468" alt="Bolsa de chocolate en polvo ABUELITA® de 750 g para máquinas vending profesionales" class="image-style-np-product-teaser-2x" />
+
+
+</div>
+      
+    </div>
+  <div class="product-teaser-wrapper-content">
+      <h3 class="product__title">Chocolate en polvo 4.5kg ABUELITA® para máquina vending - $439</h3>
+
+  <div class="inline__links"><div class="links inline nav links-inline"><span class="node-readmore nav-link">
+                    
+
+<span class="btn-sm add-to-cart"
+      data-nombre="Chocolate en polvo 4.5kg ABUELITA® para máquina vending"
+      data-modelo="4.5 kg"
+      data-precio="439"
+      data-imagen="abuelita-vending-45kg.png">
+      Agregar
+</span>
+
+</div>
+  </div>
+
+</div>
+  </div>
+  </article>
+
+</li>
+          <li>
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix"
+  data-product-id="000000000012377872"
+  data-product-name="Café en grano Espresso Roast NESCAFÉ® 1 kg"
+  data-product-price=""
+  data-product-currency=""
+  data-product-category=""
+  data-product-variant=""
+  data-product-index=""
+>
+  
+  <div class="product-teaser-wrapper-linked">
+          <div class="wishlist">
+        
+      </div>
+        
+    
+    
+        <div class="product-teaser-image-wrapper">
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://www.nestleprofessional.com.mx/sites/default/files/styles/np_product_teaser_2x/public/2025-03/NP_NESCAFE_ESPRESSO ROAST 1kg_RENDER 7698C (2) (1).png?itok=dL8cYtW5" width="468" height="468" alt="Bolsa negra con azul de café en grano NESCAFÉ® Espresso Roast de 1 kg" class="image-style-np-product-teaser-2x" />
+
+
+</div>
+      
+    </div>
+  <div class="product-teaser-wrapper-content">
+      <h3 class="product__title">Café en grano Espresso Roast NESCAFÉ® 1 kg - $379</h3>
+
+  <div class="inline__links"><div class="links inline nav links-inline"><span class="node-readmore nav-link">
+                    
+
+<span class="btn-sm add-to-cart"
+      data-nombre="Café en grano Espresso Roast NESCAFÉ® 1 kg"
+      data-modelo="1 kg"
+      data-precio="379"
+      data-imagen="espresso-roast-1kg.png">
+      Agregar
+</span>
+
+</div>
+  </div>
+
+</div>
+  </div>
+  </article>
+
+</li>
+          <li>
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix"
+  data-product-id="000000000012277394"
+  data-product-name="NESCAFÉ® Milano Espresso Descafeinado x 300 g"
+  data-product-price=""
+  data-product-currency=""
+  data-product-category=""
+  data-product-variant=""
+  data-product-index=""
+>
+  
+  <div class="product-teaser-wrapper-linked">
+          <div class="wishlist">
+        
+      </div>
+        
+    
+    
+        <div class="product-teaser-image-wrapper">
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://www.nestleprofessional.com.mx/sites/default/files/styles/np_product_teaser_2x/public/2022-11/nescafe_milano_descafeinado_300.png?itok=wZICWd1f" width="380" height="380" alt="nescafe_milano_descafeinado_300.png" class="image-style-np-product-teaser-2x" />
+
+
+</div>
+      
+    </div>
+   <div class="product-teaser-wrapper-content">
+      <h3 class="product__title">NESCAFÉ® Milano Espresso Descafeinado x 300 g - $139</h3>
+
+  <div class="inline__links"><div class="links inline nav links-inline"><span class="node-readmore nav-link">
+                    
+
+<span class="btn-sm add-to-cart"
+      data-nombre="NESCAFÉ® Milano Espresso Descafeinado x 300 g"
+      data-modelo="300 g"
+      data-precio="139"
+      data-imagen="nescafe-milano-descafeinado-300g.png">
+      Agregar
+</span>
+
+</div>
+  </div>
+
+</div>
+  </div>
+  </article>
+
+</li>
+          <li>
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix"
+  data-product-id="000000000012578283"
+  data-product-name="Chocolate NESTLÉ® x 1 kg"
+  data-product-price=""
+  data-product-currency=""
+  data-product-category=""
+  data-product-variant=""
+  data-product-index=""
+>
+  
+  <div class="product-teaser-wrapper-linked">
+          <div class="wishlist">
+        
+      </div>
+        
+    
+    
+        <div class="product-teaser-image-wrapper">
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://www.nestleprofessional.com.mx/sites/default/files/styles/np_product_teaser_2x/public/2022-11/nestle_chocolate_1kg_maquina_nes.png?itok=vgBKxRxj" width="380" height="380" alt="nestle_chocolate_1kg_maquina_nes.png" class="image-style-np-product-teaser-2x" />
+
+
+</div>
+      
+    </div>
+   <div class="product-teaser-wrapper-content">
+      <h3 class="product__title">Chocolate NESTLÉ® x 1 kg - $149</h3>
+
+  <div class="inline__links"><div class="links inline nav links-inline"><span class="node-readmore nav-link">
+                    
+
+<span class="btn-sm add-to-cart"
+      data-nombre="Chocolate NESTLÉ® x 1 kg"
+      data-modelo="1 kg"
+      data-precio="149"
+      data-imagen="chocolate-nestle-1kg.png">
+      Agregar
+</span>
+
+</div>
+  </div>
+
+</div>
+  </div>
+  </article>
+
+</li>
+          <li>
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix"
+  data-product-id="000000000012456518"
+  data-product-name="Café tostado y molido NESCAFÉ® Intenso x 450g"
+  data-product-price=""
+  data-product-currency=""
+  data-product-category=""
+  data-product-variant=""
+  data-product-index=""
+>
+  
+  <div class="product-teaser-wrapper-linked">
+          <div class="wishlist">
+        
+      </div>
+        
+    
+    
+        <div class="product-teaser-image-wrapper">
+      
+            <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">  <img loading="lazy" src="https://www.nestleprofessional.com.mx/sites/default/files/styles/np_product_teaser_2x/public/2022-11/intenso_-_tostado_y_molido.png?itok=g9Ad0ut4" width="380" height="380" alt="Bolsa de café Intenso NESCAFÉ® Tostado y Molido x 450 g para venta al por mayor" class="image-style-np-product-teaser-2x" />
+
+
+</div>
+      
+    </div>
+    <div class="product-teaser-wrapper-content">
+      <h3 class="product__title">Café tostado y molido NESCAFÉ® Intenso x 450g - $149</h3>
+
+  <div class="inline__links"><div class="links inline nav links-inline"><span class="node-readmore nav-link">
+                
+
+<span class="btn-sm add-to-cart"
+      data-nombre="Café tostado y molido NESCAFÉ® Intenso x 450g"
+      data-modelo="450 g"
+      data-precio="149"
+      data-imagen="nescafe-intenso-450g.png">
+      Agregar
+</span>
+
+</div>
+  </div>
+
+</div>
+  </div>
+  </article>
+
+</li>
+    
+  </ul>
+
+</div>
+
+    </div>
+      
+      
+    </div>
+</div>
+
+        
+        
+  
+        
+      
+
+
+
+
+
+    
+    
+      
+  <div class="compatibility-mode paragraph paragraph--type--c-text paragraph--view-mode--default"
+      style="
+                                                                              "
+      >
+    <div class="twb-grid-limited ">
+                <article class="contextual-region dsu-component-page is-promoted full clearfix" role="article">
+        <div class="content twb-narrow">
+          <div class="field field--name-field-components field--type-entity-reference-revisions field--label-hidden field--items">
+            <div class="field--item">
+              <div class="paragraph paragraph--type--c-text paragraph--view-mode--default">
+
+                
+                
+                                  
+                
+                                  
+                
+                                  
+            <div class="clearfix text-formatted field field--name-field-c-text field--type-text-long field--label-hidden field__item"><div>
+<h2 class="highlight"><span>Optimiza tu operación con los mejores insumos para máquinas de café</span></h2>
+</div>
+
+<div>
+<p><span>Conoce nuestros insumos destacados:</span></p>
+</div>
+
+<div>
+<h3 class="highlight"><span>Café en grano</span></h3>
+</div>
+
+<div>
+<p><span>Fresco, aromático y lleno de sabor, el café en grano es la elección perfecta para aquellos que valoran la calidad y la autenticidad en cada sorbo.</span></p>
+</div>
+
+<div>
+<h3 class="highlight"><span>Café soluble</span></h3>
+</div>
+
+<div>
+<p><span>Es una opción versátil y conveniente para aquellos que buscan una solución rápida y sin complicaciones. Ideal para situaciones de alto volumen.</span></p>
+</div>
+
+<div>
+<h3 class="highlight"><span>Fórmulas especiales para equipos vending</span></h3>
+</div>
+
+<div>
+<p><span>Están diseñadas para producir cappuccinos, mokaccinos y otras bebidas de especialidad deliciosas, convenientes y consistentes con solo presionar un botón.</span></p>
+</div>
+
+<div>
+<h3 class="highlight"><span>Bebidas con sabor a chocolate</span></h3>
+</div>
+
+<div>
+<p><span>Para complementar tu oferta, no puedes olvidarte de las bebidas con sabor a chocolate. Es una opción popular entre los clientes de todas las edades por su sabor reconfortante.</span></p>
+</div></div>
+      
+                              </div>
+
+                          </div>
+          </div>
+        </div>
+
+        <span class="hidden table-nav-translation-next-col" data-table-nav-translation-next-col="Next column"></span>
+        <span class="hidden table-nav-translation-prev-col" data-table-nav-translation-prev-col="Previous column"></span>
+      </article>
+        </div>
+  </div>
+
+
+
+
+
+
+
+        
+  
+        
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+      
+  <div class="compatibility-mode paragraph paragraph--type--c-text paragraph--view-mode--default"
+      style="
+                                                                              "
+      >
+    <div class="twb-grid-limited ">
+                <article class="contextual-region dsu-component-page is-promoted full clearfix" role="article">
+        <div class="content twb-narrow">
+          <div class="field field--name-field-components field--type-entity-reference-revisions field--label-hidden field--items">
+            <div class="field--item">
+              <div class="paragraph paragraph--type--c-text paragraph--view-mode--default">
+
+                
+                
+                                  
+                
+                                  
+                
+                                  
+            <div class="clearfix text-formatted field field--name-field-c-text field--type-text-long field--label-hidden field__item"><h2 class="highlight">Lo&nbsp;mejor de nuestros insumos para máquinas NESCAFÉ®</h2>
+
+<p>Destacamos las características distintivas que cada producto:</p>
+
+<h3 class="highlight">Calidad garantizada</h3>
+
+<p>Nuestras soluciones se elaboraron con los más altos estándares de calidad. De la semilla a la taza, llevamos un cuidadoso proceso de producción y hacemos una selección cuidadosa para garantizar un sabor excepcional en cada sorbo.</p>
+
+<h3 class="highlight">Compromiso con la sostenibilidad</h3>
+
+<p>La sostenibilidad es transversal en nuestras prácticas. Programas como el Plan NESCAFÉ® garantizan una producción cuidadosa, ambientalmente responsable e incluye un alto compromiso con las comunidades caficultoras y la sociedad en general.</p>
+
+<h3 class="highlight">Variedad de opciones</h3>
+
+<p>Contamos con una amplia gama de insumos para máquinas que se adaptan a diferentes preferencias y necesidades de tus clientes, complementando tu operación.</p>
+
+<h3 class="highlight">Conveniencia y facilidad de uso</h3>
+
+<p>Estos insumos están diseñados especialmente para máquinas dispensadoras automáticas, que proporcionan una preparación rápida y sin complicaciones con solo presionar un botón.</p>
+
+<h3 class="highlight">Soporte y asistencia técnica</h3>
+
+<p>Contamos con un completo servicio técnico para resolver cualquier duda con tu máquina NESCAFÉ® y las bebidas que prepara. Además, nuestro equipo capacita a tu personal en su adecuado manejo y limpieza del equipo.</p>
+
+<p>Asegúrate de elegir productos de alta calidad para garantizar el adecuado funcionamiento de tu máquina y ofrecer bebidas insuperables. Nuestras soluciones de NESCAFÉ® y NESTLÉ® son la opción ideal y segura para tu negocio.</p>
+
+<p>¡Elígenos! Tus clientes lo agradecerán.</p></div>
+      
+                              </div>
+
+                          </div>
+          </div>
+        </div>
+
+        <span class="hidden table-nav-translation-next-col" data-table-nav-translation-next-col="Next column"></span>
+        <span class="hidden table-nav-translation-prev-col" data-table-nav-translation-prev-col="Previous column"></span>
+      </article>
+        </div>
+  </div>
+
+
+    </div>
+</div>
+
+    </div>
+  </div>
+
+
+                            </section>
+                        </main>
+
+
+
+
+
+
+
+
+
+                                                                    </div>
+                </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                <footer class="site-footer">
+                            <div class="site-footer__container">
+                                            <div class="site-footer__top clearfix">
+                              <section class="row region region-footer-first">
+    <div class="twb-grid-limited">
+      <div id="block-footer-have-a-question" data-block-plugin-id="block_content:blockCon-0000-0000-type-textBlock000" class="block-content-text_block block block-block-content block-block-contentblockcon-0000-0000-type-textblock000 block-footer-have-a-question">
+  
+    
+      <div class="content">
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><ul>
+	<li>
+	<h2>¿Tienes alguna pregunta?</h2>
+	</li>
+	<li>Conecta con Nestlé Professional México y recibe asesoría sobre productos, servicios y equipos pensados para tu negocio.</li>
+</ul></div>
+      
+
+    </div>
+  </div>
+<div id="block-footer-contact" data-block-plugin-id="block_content:blockCon-0000-0000-type-textBlock001" class="block-content-text_block block block-block-content block-block-contentblockcon-0000-0000-type-textblock001 block-footer-contact">
+  
+    
+      <div class="content">
+      
+<div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><ul>
+    <li><strong>Contáctanos:</strong> completa <a href="contacto.html">este formulario</a> o escríbenos a <a href="mailto:ventas@nestleprofessional.com.mx.socios.cc">ventas@nestleprofessional.com.mx.socios.cc</a></li>
+    <li><strong>Llámanos:</strong> 55-4161-6840</li>
+
+</ul></div>
+      
+
+    </div>
+  </div>
+<div id="block-footer-faq-newsletter" data-block-plugin-id="block_content:blockCon-0000-0000-type-textBlock002" class="block-content-text_block block block-block-content block-block-contentblockcon-0000-0000-type-textblock002 block-footer-faq-newsletter">
+  
+    
+      <div class="content">
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><ul></li><li><strong>Direccion:</strong> Torre Sur, Blvd. Miguel de Cervantes Saavedra 301, Granada, Miguel Hidalgo, 11520 Ciudad de México, CDMX</li></ul></div>
+      
+
+    </div>
+  </div>
+
+    </div>
+  </section>
+
+                              <section class="row region region-footer-second">
+    <div class="twb-grid-limited">
+      <div class="footer-branding-block">
+                <div class="block-custom-sitebranding">
+          <a href="index.html" title="Home" rel="home">
+            <img src="https://www.nestleprofessional.com.mx/themes/custom/np_th/assets/images/footer/logo-nestle-professional.svg" alt="Nestlé Professional" class="site-logo">
+          </a>
+        </div>
+              </div>
+
+      <div id="block-footer-social-buttons" data-block-plugin-id="block_content:blockCon-0000-0000-type-socialBut000" class="block-content-social_buttons block block-block-content block-block-contentblockcon-0000-0000-type-socialbut000 block-footer-social-buttons">
+   
+</div>
+<nav role="navigation" aria-labelledby="block-block-menu-footer-menu" id="block-block-menu-footer" data-block-plugin-id="system_menu_block:footer" class="block block-menu navigation menu--footer block-block-menu-footer">
+            
+  <div class="sr-only" id="block-block-menu-footer-menu">Footer</div>
+  
+
+        
+              <ul class="clearfix nav flex-row" data-component-id="bootstrap_barrio:menu_columns">
+                    <li class="nav-item">
+                <a href="terminos-y-condiciones.html" class="nav-link nav-link--terminos-y-condiciones" data-drupal-link-system-path="node/719">TÉRMINOS Y CONDICIONES</a>
+              </li>
+                <li class="nav-item">
+                <a href="aviso-de-privacidad-integral.html" class="nav-link nav-link--aviso-de-privacidad-integral" data-drupal-link-system-path="node/718">AVISO DE PRIVACIDAD INTEGRAL</a>
+              </li>
+          
+                <li class="nav-item">
+                <a href="contacto.html" class="nav-link nav-link--contacto" data-drupal-link-system-path="node/707">CONTÁCTANOS</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+
+      <div class="footer-line" aria-hidden="true"></div>
+
+      <div class="footer-end col">
+        <div class="footer-copyright">® Nestlé 2026</div>
+        <div class="footer-back-to-top">
+          <button id="back-to-top" class="back-to-top">Volver arriba</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+                            
+                            
+                        </div>
+                                                        </div>
+                    </footer>
+                        </div>
+</div>
+
+  </div>
+ <div id="cart" onclick="toggleCarrito()" style="cursor: pointer; width:166px; font-family:Arial,sans-serif;">
+  <h5 style="margin:0; padding:25px; color:black; font-size:16px;">
+    🛒 Carrito (<span id="cart-count">0</span>)
+  </h5>
+
+  <div id="cart-details" style="display: none; padding:10px; border:1px solid #ccc;">
+    <ul id="cart-items" style="list-style:none; padding:0; margin:0;"></ul>
+
+    <div style="text-align:right; font-weight:bold; margin-top:8px;">
+      Total: $<span id="cart-total">0.00</span>
+    </div>
+
+    <div style="display:flex; justify-content:space-between; margin-top:10px;">
+      <button onclick="vaciarCarrito(event)" style="width:48%; padding:5px 0;">Vaciar Carrito</button>
+      <button onclick="finalizarCompra(event)" style="width:48%; padding:5px 0;">Finalizar Compra</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+function guardarCarrito() {
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+  actualizarCarrito();
+}
+
+function actualizarCarrito() {
+  const lista = document.getElementById('cart-items');
+  const total = document.getElementById('cart-total');
+  const contador = document.getElementById('cart-count');
+
+  lista.innerHTML = '';
+  let totalPrecio = 0;
+
+  carrito.forEach((item, index) => {
+    const li = document.createElement('li');
+    li.style.display = 'flex';
+    li.style.alignItems = 'center';
+    li.style.marginBottom = '8px';
+    li.style.borderBottom = '1px solid #eee';
+    li.style.paddingBottom = '4px';
+
+    const img = document.createElement('img');
+    img.src = item.imagen;
+    img.style.width = '40px';
+    img.style.height = '40px';
+    img.style.objectFit = 'cover';
+    img.style.marginRight = '10px';
+
+    const texto = document.createElement('span');
+    texto.textContent = `${item.nombre} ${item.modelo ? '(' + item.modelo + ')' : ''} - $${item.precio.toFixed(2)}`;
+    texto.style.fontSize = '14px';
+
+    const btnEliminar = document.createElement('button');
+    btnEliminar.textContent = '✕';
+    btnEliminar.style.marginLeft = 'auto';
+    btnEliminar.style.border = 'none';
+    btnEliminar.style.background = 'transparent';
+    btnEliminar.style.color = '#dc3545';
+    btnEliminar.style.cursor = 'pointer';
+
+    btnEliminar.onclick = (e) => {
+      e.stopPropagation();
+      carrito.splice(index, 1);
+      guardarCarrito();
+    };
+
+    li.appendChild(img);
+    li.appendChild(texto);
+    li.appendChild(btnEliminar);
+    lista.appendChild(li);
+
+    totalPrecio += item.precio;
+  });
+
+  contador.textContent = carrito.length;
+  total.textContent = totalPrecio.toFixed(2);
+}
+
+function vaciarCarrito(e){
+  e.stopPropagation();
+  carrito = [];
+  guardarCarrito();
+}
+
+function finalizarCompra(e){
+  e.stopPropagation();
+  guardarCarrito();
+  window.location.href = "checkout.html";
+}
+
+function toggleCarrito(){
+  const detalles = document.getElementById('cart-details');
+  detalles.style.display = (detalles.style.display === 'none') ? 'block' : 'none';
+}
+
+/* ✅ BOTÓN UNIVERSAL (ESTO ES LA CORRECCIÓN CLAVE) */
+document.querySelectorAll('.add-to-cart').forEach(btn => {
+  btn.addEventListener('click', function(e){
+    e.preventDefault();
+
+    let nombre = this.dataset.nombre;
+    let modelo = this.dataset.modelo || '';
+    let precio = parseFloat(this.dataset.precio);
+    let imagen = this.dataset.imagen;
+
+    // SOLO si existe product-card (productos con select)
+    const card = this.closest('.product-card');
+    if(card){
+      const select = card.querySelector('.sabor-select');
+      if(select){
+        const sabor = select.value;
+        if(!sabor){
+          alert('Por favor, selecciona un sabor.');
+          return;
+        }
+        modelo = sabor;
+      }
+    }
+
+    carrito.push({ nombre, modelo, precio, imagen });
+    guardarCarrito();
+  });
+});
+
+document.addEventListener('DOMContentLoaded', actualizarCarrito);
+</script>
+
+    <script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/polyfill/blazy.polyfill.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/polyfill/blazy.classlist.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/polyfill/blazy.promise.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/polyfill/blazy.raf.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/once/once.min.js?v=1.0.1"></script>
+<script src="https://www.nestleprofessional.com.mx/sites/default/files/languages/es-mx_wwwFSWgSSV7LzDJvv0t5DS6rwrynzO44keNV6h6Ek88.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/drupal.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/drupal.init.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/libraries/dompurify/dist/purify.min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/debounce.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/version-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/data-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/disable-selection-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/jquery-patch-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/scroll-parent-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/unique-id-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/focusable-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/keycode-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/plugin-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/widget-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/labels-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/widgets/controlgroup-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/form-reset-mixin-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/widgets/mouse-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/widgets/checkboxradio-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/widgets/draggable-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/widgets/resizable-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/widgets/button-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/widgets/dialog-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/dblazy.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/plugin/blazy.once.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/plugin/blazy.sanitizer.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/plugin/blazy.dom.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/base/blazy.base.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/plugin/blazy.dataset.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/plugin/blazy.viewport.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/plugin/blazy.xlazy.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/plugin/blazy.observer.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/plugin/blazy.loading.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/polyfill/blazy.webp.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/base/blazy.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/base/io/bio.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/base/io/bio.media.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/base/blazy.drupal.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/blazy.load.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/tabbable/index.umd.min.js?v=6.2.0"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/tua-body-scroll-lock/tua-bsl.umd.min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/better_exposed_filters/js/better_exposed_filters.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/js/barrio.js?v=11.2.12"></script>
+<script src="../../cdn.jsdelivr.net/npm/jquery-validation%401.19.5/dist/jquery.validate.min.js"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/clientside_validation/clientside_validation_jquery/js/cv.jquery.validate.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/datalayer/js/datalayer.js?v=1.x"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/dsu_product/assets/js/dsu-product.js?v=1.x"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/extlink/js/extlink.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/progress.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/loadjs/loadjs.min.js?v=4.3.0"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/announce.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/message.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/js/messages.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/ajax.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/displace.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/position.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/dialog/dialog-deprecation.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/dialog/dialog.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/dialog/dialog.position.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/dialog/dialog.jquery-ui.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/modules/ckeditor5/js/ckeditor5.dialog.fix.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/dialog/dialog.ajax.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/flag/js/flag-action_link_flash.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/google_tag/js/gtag.ajax.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/ln_datalayer/js/ln_datalayer.events.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/custom/np_article/dist/js/gtm/gtm.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/custom/np_customer_portal/np_cp_user/dist/js/np_cp_custom_login_block.behaviors.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/custom/np_datalayer_event/dist/js/gtm_custom.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/custom/np_local_recipe/dist/js/gtm/gtm.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/custom/np_product/dist/js/gtm/gtm.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/custom/np_recipe/dist/js/gtm/gtm.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/js/components/np_accordion.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/js/components/np-form.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/custom/np_core/dist/js/libraries/utility.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/custom/np_core/dist/js/libraries/browser.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/custom/np_core/dist/js/libraries/print.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/js/np.behaviors.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/js/components/np_market-switcher.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/js/components/np_media--image--embedded.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/libraries/tabbable/dist/index.umd.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/libraries/focus-trap/dist/focus-trap.umd.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/js/components/np-menu_navigation.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/libraries/accessible360--accessible-slick/slick/slick.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/js/components/np_redirect_target_links.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/js/components/np_paragraph_related-product.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/responsive_tables_filter/js/tablesaw.js?v=1.x"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/responsive_tables_filter/js/tablesaw-init.js?v=1.x"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/responsive_tables_filter/js/Drupal/ajaxComplete.js?v=1.x"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/responsive_tables_filter/js/Drupal/accessibility.js?v=1.x"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/js/components/np_tables.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/js/components/np_product-teaser-distributor-action-button.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/js/components/np_quick-search.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/js/components/np_paragraph_c-container.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/custom/np_hybris_customer_portal/wpss_customer_portal/dist/js/gtm/gtm.js?v=1.x"></script>
+ <script src="https://www.nestleprofessional.com.mx/core/assets/vendor/once/once.min.js?v=1.0.1"></script>
+<script src="https://www.nestleprofessional.com.mx/sites/default/files/languages/es-mx_wwwFSWgSSV7LzDJvv0t5DS6rwrynzO44keNV6h6Ek88.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/drupal.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/drupal.init.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/debounce.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/libraries/dompurify/dist/purify.min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/version-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/data-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/disable-selection-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/jquery-patch-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/scroll-parent-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/unique-id-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/focusable-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/keycode-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/plugin-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/widget-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/labels-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/widgets/controlgroup-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/form-reset-mixin-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/widgets/mouse-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/widgets/checkboxradio-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/widgets/draggable-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/widgets/resizable-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/widgets/button-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery.ui/ui/widgets/dialog-min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/dblazy.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/plugin/blazy.once.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/plugin/blazy.sanitizer.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/plugin/blazy.dom.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/base/blazy.base.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/plugin/blazy.dataset.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/plugin/blazy.viewport.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/plugin/blazy.xlazy.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/plugin/blazy.observer.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/base/io/bio.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/base/io/bio.media.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/base/blazy.drupal.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/blazy.compat.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/tabbable/index.umd.min.js?v=6.2.0"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/tua-body-scroll-lock/tua-bsl.umd.min.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/better_exposed_filters/js/auto_submit.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/better_exposed_filters/js/better_exposed_filters.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/better_exposed_filters/js/bef_select_all_none.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/progress.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/assets/vendor/loadjs/loadjs.min.js?v=4.3.0"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/announce.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/message.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/js/messages.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/ajax.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/blazy/js/base/io/bio.ajax.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/contrib/bootstrap_barrio/js/barrio.js?v=11.2.12"></script>
+<script src="../../cdn.jsdelivr.net/npm/jquery-validation%401.19.5/dist/jquery.validate.min.js"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/clientside_validation/clientside_validation_jquery/js/cv.jquery.validate.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/datalayer/js/datalayer.js?v=1.x"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/dsu_product/assets/js/dsu-product.js?v=1.x"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/extlink/js/extlink.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/displace.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/position.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/dialog/dialog-deprecation.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/dialog/dialog.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/dialog/dialog.position.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/dialog/dialog.jquery-ui.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/modules/ckeditor5/js/ckeditor5.dialog.fix.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/dialog/dialog.ajax.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/flag/js/flag-action_link_flash.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/google_tag/js/gtag.ajax.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/ln_datalayer/js/ln_datalayer.events.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/custom/np_article/dist/js/gtm/gtm.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/custom/np_customer_portal/np_cp_user/dist/js/np_cp_custom_login_block.behaviors.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/custom/np_datalayer_event/dist/js/gtm_custom.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/custom/np_local_recipe/dist/js/gtm/gtm.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/custom/np_product/dist/js/gtm/gtm.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/custom/np_recipe/dist/js/gtm/gtm.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/js/components/np-form.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/custom/np_core/dist/js/libraries/utility.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/custom/np_core/dist/js/libraries/browser.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/custom/np_core/dist/js/libraries/print.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/js/np.behaviors.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/js/components/np_market-switcher.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/libraries/tabbable/dist/index.umd.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/libraries/focus-trap/dist/focus-trap.umd.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/js/components/np-menu_navigation.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/libraries/accessible360--accessible-slick/slick/slick.min.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/js/components/np_redirect_target_links.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/js/components/np_paragraph_related-product.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/responsive_tables_filter/js/tablesaw.js?v=1.x"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/responsive_tables_filter/js/tablesaw-init.js?v=1.x"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/responsive_tables_filter/js/Drupal/ajaxComplete.js?v=1.x"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/responsive_tables_filter/js/Drupal/accessibility.js?v=1.x"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/js/components/np_tables.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/js/components/np_product-teaser-distributor-action-button.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/js/components/np_quick-search.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/themes/custom/np_th/dist/js/components/np_view_filters.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/core/misc/jquery.form.js?v=4.3.0"></script>
+<script src="https://www.nestleprofessional.com.mx/core/modules/views/js/base.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/core/modules/views/js/ajax_view.js?v=11.2.12"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/views_ajax_history/js/views_ajax_history.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/contrib/views_filters_summary/js/views-filters-summary.js?tg02e2"></script>
+<script src="https://www.nestleprofessional.com.mx/modules/custom/np_hybris_customer_portal/wpss_customer_portal/dist/js/gtm/gtm.js?v=1.x"></script>
+</body>
+</html>
