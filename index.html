@@ -247,6 +247,41 @@ transition: all .2s ease-in-out;
 #cart-details button:last-child:hover {
   background: #b8001c;
 }
+
+/* Botón Agregar: efecto visual */
+.add-to-cart {
+    display: inline-block;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color .2s ease,
+                transform .12s ease,
+                box-shadow .12s ease;
+    box-shadow: 0 3px 0 #004b31;
+}
+
+/* Estado normal */
+.add-to-cart {
+    cursor: pointer;
+    transition: background-color .15s ease,
+                color .15s ease,
+                transform .15s ease,
+                box-shadow .15s ease;
+}
+
+/* Al pasar el cursor */
+.add-to-cart:hover {
+    filter: brightness(1.08);
+}
+
+/* Mientras se presiona */
+.add-to-cart:active {
+    background-color: #dc3545 !important;
+    color: #ffffff !important;
+    transform: scale(0.94);
+    box-shadow: 0 0 0 4px rgba(220, 53, 69, 0.22);
+}
+
+
 </style>
     <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","pathPrefix":"","currentPath":"node\/592","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"es-mx"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"eJx1VO2WqyAMfCHRR-IESJUtX0ug3d6n36DU2rr3Rz3JTEhgGKqwFMwSf1IkNPJiHac0zRgwgxuUg3-Paf32WDsgcpZKz10E08MU3YMbPFelHL0l7FmGS4_uqNKgYixUMiSpIGcbp0vM_ozOLipwgsrD2TCfeUavNGhnMRSyBuUNnDVQbAzy67ti5g3fxi0aO4eDjhknHX2Koa0bP9sK4TFUqaOrPtDAa8DBA_OkcIGbjZkxYl6ujZ5abVDbhfUwY8Gf8sGdIJbIVF0mjkWPB65pp5pMrgnc2NPh4mCe2mdsqYQv-BnmGGeHsjAz8-czH89Ffti0kAZTRs1i8J3XoJtgtKuts02FBhfk6-h79A7jrSk4eDQWps09o4bU-g0hScjFaodtsnBWZciPBuskK_HqLdSVSvTSxdkGqVzU11azz5DrjNaiVzaWSyf-HZvyQnCST2XTaeBT6A_47-KyvMwhxII5CvLAvt64kARovnnTz7hBmuiVrGbes68D4yFfsQi626K584FoCorVOQK9QmPQHNlQRWDvzVDexoZoUPDOgxGXetziSlzgWxQEOg5aia7HiUxt_H2BQpDSEc4w8_tYREbXTLO79Y-S5vIX_l2tvgpCyHrp6KtUC4rasuVULYUdeCpowsZQwIZ9l29kO-DnZbwVrK_NaqEg_KfFs6JLsXP0fIEvZKwhVcV_fgvfDT2ooJ8Urxruiaibk_2aYmbrrobtrvoF_TYXcg","theme":"np_th","theme_token":null},"ajaxTrustedUrl":{"\/search":true},"gtag":{"tagId":"","consentMode":false,"otherIds":[],"events":[],"additionalConfigInfo":[]},"gtm":{"tagId":null,"settings":{"hostname":"data-sa.nestleprofessional.com.mx","data_layer":"dataLayer","include_classes":false,"allowlist_classes":"","blocklist_classes":"","include_environment":false,"environment_id":"","environment_token":""},"tagIds":["GTM-WJBXKM"],"hostnames":{"GTM-WJBXKM":"data-sa.nestleprofessional.com.mx"}},"clientside_validation_jquery":{"validate_all_ajax_forms":2,"force_validate_on_blur":false,"force_html5_validation":false,"messages":{"required":"Este campo es obligatorio.","remote":"Please fix this field.","email":"Especifique una direcci\u00f3n de correo electr\u00f3nico v\u00e1lida, por favor.","url":"Please enter a valid URL.","date":"Please enter a valid date.","dateISO":"Please enter a valid date (ISO).","number":"Please enter a valid number.","digits":"Please enter only digits.","equalTo":"Please enter the same value again.","maxlength":"Please enter no more than {0} characters.","minlength":"Please enter at least {0} characters.","rangelength":"Please enter a value between {0} and {1} characters long.","range":"Please enter a value between {0} and {1}.","max":"Please enter a value less than or equal to {0}.","min":"Please enter a value greater than or equal to {0}.","step":"Please enter a multiple of {0}."}},"dataLayer":{"defaultLang":"es-mx","languages":{"es-mx":{"id":"es-mx","name":"Spanish (Mexico)","direction":"ltr","weight":-10},"en":{"id":"en","name":"English","direction":"ltr","weight":0},"es":{"id":"es","name":"Espa\u00f1ol","direction":"ltr","weight":1}}},"ln_datalayer":{"data":{"module_name":"Lightnest Data Layer","module_version":"4.0.1","content_id":"592","content_name":"M\u00e1quinas de caf\u00e9 para negocio","content_type":"brand"}},"np_datalayer_event":[],"data":{"extlink":{"extTarget":true,"extTargetAppendNewWindowLabel":"(opens in a new window)","extTargetNoOverride":true,"extNofollow":true,"extTitleNoOverride":false,"extNoreferrer":true,"extFollowNoOverride":true,"extClass":"0","extLabel":"(link is external)","extImgClass":false,"extSubdomains":true,"extExclude":"","extInclude":"","extCssExclude":"","extCssInclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","extHideIcons":false,"mailtoClass":"0","telClass":"","mailtoLabel":"(link sends email)","telLabel":"(link is a phone number)","extUseFontAwesome":false,"extIconPlacement":"append","extPreventOrphan":false,"extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","extAdditionalLinkClasses":"","extAdditionalMailtoClasses":"","extAdditionalTelClasses":"","extFaTelClasses":"fa fa-phone","whitelistedDomains":[],"extExcludeNoreferrer":""}},"blazy":{"loadInvisible":false,"offset":100,"saveViewportOffsetDelay":50,"validateDelay":25,"container":"","loader":true,"unblazy":false,"visibleClass":false},"blazyIo":{"disconnect":false,"rootMargin":"0px","threshold":[0,0.25,0.5,0.75,1]},"components":{"c_sideimagetext":{"13766":{"entityId":"13766","entityType":"c_sideimagetext"},"13739":{"entityId":"13739","entityType":"c_sideimagetext"},"15835":{"entityId":"15835","entityType":"c_sideimagetext"},"15834":{"entityId":"15834","entityType":"c_sideimagetext"},"15833":{"entityId":"15833","entityType":"c_sideimagetext"}},"np_column_container":{"13740":{"entityId":"13740","entityType":"np_column_container"},"15836":{"entityId":"15836","entityType":"np_column_container"}},"np_faq_accordion":{"15472":{"entityId":"15472","entityType":"np_faq_accordion"},"15471":{"entityId":"15471","entityType":"np_faq_accordion"}},"c_generic_banner":{"15470":{"entityId":"15470","entityType":"c_generic_banner"}},"np_related_product":{"14008":{"entityId":"14008","entityType":"np_related_product"},"9478":{"entityId":"9478","entityType":"np_related_product"}}},"cartUrls":{"update":"\/cp\/hybris\/cart\/update","removeEntry":"\/cp\/hybris\/cart\/remove-entry","removeAll":"\/cp\/hybris\/cart\/remove-all","deliveryAddress":"\/cp\/hybris\/checkout\/deliveryaddress","shipping":"\/cp\/hybris\/checkout\/shipping","placeOrder":"\/cp\/hybris\/checkout\/placeorder","delivery":"\/cp\/hybris\/checkout\/delivery"},"ajax":[],"user":{"uid":0,"permissionsHash":"2b1f30ab1ad306f253429e03a3cf685da704bdf90ef94e56309985325448d6de"}}</script>
 <script src="https://www.nestleprofessional.com.mx/core/assets/vendor/jquery/jquery.min.js?v=4.0.0-rc.1"></script>
@@ -535,6 +570,994 @@ transition: all .2s ease-in-out;
     
     
       
+              <div class="field__item">
+        
+  
+        
+      
+    
+    
+      
+  <div class="compatibility-mode paragraph paragraph--type--c-text paragraph--view-mode--default"
+      style="
+                                                                              "
+      >
+    <div class="twb-grid-limited ">
+                <article class="contextual-region dsu-component-page is-promoted full clearfix" role="article">
+        <div class="content twb-narrow">
+          <div class="field field--name-field-components field--type-entity-reference-revisions field--label-hidden field--items">
+            <div class="field--item">
+              <div class="paragraph paragraph--type--c-text paragraph--view-mode--default">
+
+                
+                
+                                  
+                
+                                  
+                
+                                  
+            <div class="clearfix text-formatted field field--name-field-c-text field--type-text-long field--label-hidden field__item"><h2 class="text-align-center highlight"><span lang="ES">Catálogo de máquinas cafeteras para negocio y hogar</span></h2><p><span lang="ES"></span></p><p><span lang="ES-CO">Explora nuestra gama de cafeteras para negocio en México, desde modelos espresso profesionales hasta opciones compactas para espacios reducidos. Cada máquina está diseñada para ofrecer calidad, consistencia y el mejor sabor en cada taza, ayudando a que tu negocio destaque.</span></p></div>
+      
+                              </div>
+
+                          </div>
+          </div>
+        </div>
+
+        <span class="hidden table-nav-translation-next-col" data-table-nav-translation-next-col="Next column"></span>
+        <span class="hidden table-nav-translation-prev-col" data-table-nav-translation-prev-col="Previous column"></span>
+      </article>
+        </div>
+  </div>
+</div>
+              <div class="field__item">  <div  class="compatibility-mode full-component-wrapper paragraph-np-related-product" id="catalogo" data-target="">
+                  
+    <div class="paragraph paragraph--type--related-product paragraph--view-mode--teaser-list">
+        <div class="related-product-container twb-grid-limited" data-item-list-id="related_products" data-item-list-name="Related Products">
+            <div class="related-product-wrapper-content">
+                                    <div class="related-product-text">
+                        <div class="field-related-product-title">
+                                                            <h3 class="heading">Máquinas NESCAFÉ® para bebidas </h3>
+                                                    </div>
+                    </div>
+                                    <div class="related-product-products">
+                        
+      <div class="field field--name-field-product field--type-entity-reference field--label-hidden field__items">
+             
+
+
+
+ <div class="field__item">
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
+
+  <div class="product-teaser-wrapper-linked">
+
+    <div class="wishlist"></div>
+
+    <div class="product-teaser-image-wrapper">
+
+      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
+
+        <a href="next.html" target="_blank">
+          <img loading="lazy"
+               src="1.png"
+               width="452"
+               height="468"
+               alt="Primer plano de la máquina de café NESCAFÉ® Titán"
+               class="image-style-np-product-teaser-2x" />
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="product-teaser-wrapper-content">
+
+      <h3 class="product__title">
+     NESCAFÉ® Vertuo Next Cherry Red - $2,520
+      </h3>
+
+      <div class="inline__links">
+        <div class="links inline nav links-inline">
+
+          <span class="node-readmore nav-link">
+
+            <span class="btn-sm add-to-cart"
+                  data-nombre="Máquina NESCAFÉ® "
+                  data-modelo="Vertuo Next Cherry Red"
+                  data-precio="2500"
+                  data-imagen="1.png">
+              Agregar
+            </span>
+
+          </span>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+</div>
+
+
+ <div class="field__item">
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
+
+  <div class="product-teaser-wrapper-linked">
+
+    <div class="wishlist"></div>
+
+    <div class="product-teaser-image-wrapper">
+
+      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
+
+        <a href="up.html" target="_blank">
+          <img loading="lazy"
+               src="2.png"
+               width="452"
+               height="468"
+               alt="Primer plano de la máquina de café NESCAFÉ® Titán"
+               class="image-style-np-product-teaser-2x" />
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="product-teaser-wrapper-content">
+
+      <h3 class="product__title">
+     NESCAFÉ® Vertuo Up Pearl White- $3,000
+      </h3>
+
+      <div class="inline__links">
+        <div class="links inline nav links-inline">
+
+          <span class="node-readmore nav-link">
+
+            <span class="btn-sm add-to-cart"
+                  data-nombre="Máquina NESCAFÉ® "
+                  data-modelo="Vertuo Up Pearl White"
+                  data-precio="3000"
+                  data-imagen="2.png">
+              Agregar
+            </span>
+
+          </span>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+</div>
+
+
+ <div class="field__item">
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
+
+  <div class="product-teaser-wrapper-linked">
+
+    <div class="wishlist"></div>
+
+    <div class="product-teaser-image-wrapper">
+
+      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
+
+        <a href="citiz.html" target="_blank">
+          <img loading="lazy"
+               src="3.png"
+               width="452"
+               height="468"
+               alt="Primer plano de la máquina de café NESCAFÉ® Titán"
+               class="image-style-np-product-teaser-2x" />
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="product-teaser-wrapper-content">
+
+      <h3 class="product__title">
+     NESCAFÉ® CitiZ Platinum C Stainless Steel - $3,780
+      </h3>
+
+      <div class="inline__links">
+        <div class="links inline nav links-inline">
+
+          <span class="node-readmore nav-link">
+
+            <span class="btn-sm add-to-cart"
+                  data-nombre="Máquina NESCAFÉ® "
+                  data-modelo="CitiZ Platinum C Stainless Steel"
+                  data-precio="3780"
+                  data-imagen="3.png">
+              Agregar
+            </span>
+
+          </span>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+</div>
+
+
+ <div class="field__item">
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
+
+  <div class="product-teaser-wrapper-linked">
+
+    <div class="wishlist"></div>
+
+    <div class="product-teaser-image-wrapper">
+
+      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
+
+        <a href="lattissima.html" target="_blank">
+          <img loading="lazy"
+               src="4.png"
+               width="452"
+               height="468"
+               alt="Primer plano de la máquina de café NESCAFÉ® Titán"
+               class="image-style-np-product-teaser-2x" />
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="product-teaser-wrapper-content">
+
+      <h3 class="product__title">
+     NESCAFÉ® Lattissima One Shadow Black - $5,000
+      </h3>
+
+      <div class="inline__links">
+        <div class="links inline nav links-inline">
+
+          <span class="node-readmore nav-link">
+
+            <span class="btn-sm add-to-cart"
+                  data-nombre="Máquina NESCAFÉ® "
+                  data-modelo="Lattissima One Shadow Black"
+                  data-precio="5000"
+                  data-imagen="4.png">
+              Agregar
+            </span>
+
+          </span>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+</div>
+
+ <div class="field__item">
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
+
+  <div class="product-teaser-wrapper-linked">
+
+    <div class="wishlist"></div>
+
+    <div class="product-teaser-image-wrapper">
+
+      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
+
+        <a href="creatista.html" target="_blank">
+          <img loading="lazy"
+               src="cr3.png"
+               width="452"
+               height="468"
+               alt="Primer plano de la máquina de café NESCAFÉ® Titán"
+               class="image-style-np-product-teaser-2x" />
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="product-teaser-wrapper-content">
+
+      <h3 class="product__title">
+     NESCAFÉ® Vertuo Creatista acero inoxidable - $10,450
+      </h3>
+
+      <div class="inline__links">
+        <div class="links inline nav links-inline">
+
+          <span class="node-readmore nav-link">
+
+            <span class="btn-sm add-to-cart"
+                  data-nombre="Máquina NESCAFÉ® "
+                  data-modelo="Vertuo Creatista acero inoxidable"
+                  data-precio="10450"
+                  data-imagen="5.png">
+              Agregar
+            </span>
+
+          </span>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+</div>
+
+
+              <div class="field__item">
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
+
+  <div class="product-teaser-wrapper-linked">
+
+    <div class="wishlist"></div>
+
+    <div class="product-teaser-image-wrapper">
+
+      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
+
+        <a href="axiom.html" target="_blank">
+          <img loading="lazy"
+               src="axioms.png"
+               width="468"
+               height="468"
+               alt="Primer plano de la máquina de café NESCAFÉ® Axiom"
+               class="image-style-np-product-teaser-2x" />
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="product-teaser-wrapper-content">
+
+      <h3 class="product__title">
+        NESCAFÉ® Axiom - café en grano - $8,000
+      </h3>
+
+      <div class="inline__links">
+        <div class="links inline nav links-inline">
+          <span class="node-readmore nav-link">
+
+            <span class="btn-sm add-to-cart"
+                  data-nombre="Máquina de café NESCAFÉ® "
+                  data-modelo="Axiom"
+                  data-precio="8000"
+                  data-imagen="axiom.png">
+              Agregar
+            </span>
+
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+</div>
+
+ <div class="field__item">
+
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
+
+  <div class="product-teaser-wrapper-linked">
+
+    <div class="wishlist">
+    </div>
+
+    <div class="product-teaser-image-wrapper">
+
+      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
+
+        <a href="boxha.html" target="_blank">
+          <img loading="lazy"
+               src="boxhas.png"
+               width="380"
+               height="380"
+               alt="Cafetera profesional NESCAFÉ® Boxha con acabado en acero inoxidable y controles digitales."
+               class="image-style-np-product-teaser-2x" />
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="product-teaser-wrapper-content">
+
+      <h3 class="product__title">
+       NESCAFÉ® Boxha - $12,000
+      </h3>
+
+      <div class="inline__links">
+        <div class="links inline nav links-inline">
+          <span class="node-readmore nav-link">
+
+            <span class="btn-sm add-to-cart"
+                  data-nombre="Máquina de café NESCAFÉ® "
+                  data-modelo="Boxha"
+                  data-precio="12000"
+                  data-imagen="boxha.png">
+              Agregar
+            </span>
+
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+
+</div>
+             
+
+ <div class="field__item">
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
+
+  <div class="product-teaser-wrapper-linked">
+
+    <div class="wishlist"></div>
+
+    <div class="product-teaser-image-wrapper">
+
+      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
+
+        <a href="crane.html" target="_blank">
+          <img loading="lazy"
+               src="crane.png"
+               width="452"
+               height="468"
+               alt="Primer plano de la máquina de café NESCAFÉ® Titán"
+               class="image-style-np-product-teaser-2x" />
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="product-teaser-wrapper-content">
+
+      <h3 class="product__title">
+        NESCAFÉ® CRANE  - café soluble - $17,000
+      </h3>
+
+      <div class="inline__links">
+        <div class="links inline nav links-inline">
+
+          <span class="node-readmore nav-link">
+
+            <span class="btn-sm add-to-cart"
+                  data-nombre="Máquina de café NESCAFÉ® "
+                  data-modelo="Crane"
+                  data-precio="17000"
+                  data-imagen="crane.png">
+              Agregar
+            </span>
+
+          </span>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+</div>
+  <div class="field__item">
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
+
+  <div class="product-teaser-wrapper-linked">
+
+    <div class="wishlist"></div>
+
+    <div class="product-teaser-image-wrapper">
+
+      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
+
+        <a href="860.html" style="width: 70%;padding-left: 10%;" target="_blank">
+          <img loading="lazy"
+               src="860.png"
+               />
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="product-teaser-wrapper-content">
+
+      <h3 class="product__title">
+       NESCAFÉ® 8/60 | café soluble  - $23,000
+      </h3>
+
+      <div class="inline__links">
+        <div class="links inline nav links-inline">
+          <span class="node-readmore nav-link">
+
+            <span class="btn-sm add-to-cart"
+                  data-nombre="Máquina NESCAFÉ® "
+                  data-modelo="8/60"
+                  data-precio="23000"
+                  data-imagen="860.png">
+              Agregar
+            </span>
+
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+</div>
+
+ <div class="field__item">
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
+
+  <div class="product-teaser-wrapper-linked">
+
+    <div class="wishlist">
+    </div>
+
+    <div class="product-teaser-image-wrapper">
+
+      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
+
+        <a href="ftp30.html" target="_blank">
+          <img loading="lazy"
+               src="ftp30.png"
+               width="468"
+               height="468"
+               alt="Máquina NESCAFÉ® Fusión Soluble"
+               class="image-style-np-product-teaser-2x" />
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="product-teaser-wrapper-content">
+
+      <h3 class="product__title">
+        NESCAFÉ® FTP 30 E - café soluble - $27,000
+      </h3>
+
+      <div class="inline__links">
+        <div class="links inline nav links-inline">
+          <span class="node-readmore nav-link">
+
+            <span class="btn-sm add-to-cart"
+                  data-nombre=" NESCAFÉ® FTP 30 E"
+                  data-modelo=" Máquina café soluble"
+                  data-precio="27000"
+                  data-imagen="ftp30.png">
+              Agregar
+            </span>
+
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+</div> <div class="field__item">
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
+
+  <div class="product-teaser-wrapper-linked">
+
+    <div class="wishlist"></div>
+
+    <div class="product-teaser-image-wrapper">
+
+      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
+
+        <a href="hotoverice.html" target="_blank">
+          <img loading="lazy"
+               src="hotoverices.png"
+               width="468"
+               height="468"
+               alt="Primer plano de la máquina NESCAFÉ® Hot Over Ice"
+               class="image-style-np-product-teaser-2x" />
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="product-teaser-wrapper-content">
+
+      <h3 class="product__title">
+        NESCAFÉ® Hot Over Ice - café soluble - $32,000
+      </h3>
+
+      <div class="inline__links">
+        <div class="links inline nav links-inline">
+
+          <span class="node-readmore nav-link">
+
+            <span class="btn-sm add-to-cart"
+                  data-nombre="Máquina NESCAFÉ®"
+                  data-modelo="Hot Over Ice"
+                  data-precio="32000"
+                  data-imagen="hotoverice.png">
+              Agregar
+            </span>
+
+          </span>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+</div>
+              <div class="field__item">
+
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
+
+  <div class="product-teaser-wrapper-linked">
+
+    <div class="wishlist"></div>
+
+    <div class="product-teaser-image-wrapper">
+
+      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
+
+        <a href="fts60.html" target="_blank">
+          <img loading="lazy"
+               src="ftps.png"
+               width="312"
+               height="468"
+               alt="Primer plano de la máquina de café NESCAFÉ® Fusión Grano"
+               class="image-style-np-product-teaser-2x" />
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="product-teaser-wrapper-content">
+
+      <h3 class="product__title">
+        NESCAFÉ® FTS 60E - café en grano - $32,000
+      </h3>
+
+      <div class="inline__links">
+        <div class="links inline nav links-inline">
+          <span class="node-readmore nav-link">
+
+            <span class="btn-sm add-to-cart"
+                  data-nombre="Máquina NESCAFÉ® "
+                  data-modelo="FTS 60E "
+                  data-precio="32000"
+                  data-imagen="ftp.png">
+              Agregar
+            </span>
+
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+</div>
+             
+            
+              <div class="field__item">
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
+
+  <div class="product-teaser-wrapper-linked">
+
+    <div class="wishlist"></div>
+
+    <div class="product-teaser-image-wrapper">
+
+      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
+
+        <a href="mts60e.html" target="_blank">
+          <img loading="lazy"
+               src="mts.png"
+               width="380"
+               height="380"
+               alt="Primer plano de la máquina de café NESCAFÉ® MTS60E"
+               class="image-style-np-product-teaser-2x" />
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="product-teaser-wrapper-content">
+
+      <h3 class="product__title">
+        NESCAFÉ® MTS60E - café en grano - $38,000
+      </h3>
+
+      <div class="inline__links">
+        <div class="links inline nav links-inline">
+          <span class="node-readmore nav-link">
+
+            <span class="btn-sm add-to-cart"
+                  data-nombre="Máquina de café NESCAFÉ® "
+                  data-modelo="MTS60E"
+                  data-precio="38000"
+                  data-imagen="mts.png">
+              Agregar
+            </span>
+
+          </span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+</div>
+              <div class="field__item">
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
+
+  <div class="product-teaser-wrapper-linked">
+
+    <div class="wishlist"></div>
+
+    <div class="product-teaser-image-wrapper">
+
+      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
+
+        <a href="titan.html" target="_blank">
+          <img loading="lazy"
+               src="titan.png"
+               width="452"
+               height="468"
+               alt="Primer plano de la máquina de café NESCAFÉ® Titán"
+               class="image-style-np-product-teaser-2x" />
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="product-teaser-wrapper-content">
+
+      <h3 class="product__title">
+        NESCAFÉ® Titán - café en grano - $40,000
+      </h3>
+
+      <div class="inline__links">
+        <div class="links inline nav links-inline">
+
+          <span class="node-readmore nav-link">
+
+            <span class="btn-sm add-to-cart"
+                  data-nombre="Máquina de café NESCAFÉ® "
+                  data-modelo="Titán"
+                  data-precio="40000"
+                  data-imagen="titan.png">
+              Agregar
+            </span>
+
+          </span>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+ <div class="field__item">
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
+
+  <div class="product-teaser-wrapper-linked">
+
+    <div class="wishlist"></div>
+
+    <div class="product-teaser-image-wrapper">
+
+      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
+
+        <a href="granita.html" target="_blank">
+          <img loading="lazy"
+               src="granitas.png"
+               width="468"
+               height="468"
+               alt="Primer plano de la máquina NESCAFÉ® Granita"
+               class="image-style-np-product-teaser-2x" />
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="product-teaser-wrapper-content">
+
+      <h3 class="product__title">
+        NESCAFÉ® Granita - Máquina de frappe - $40,000
+      </h3>
+
+      <div class="inline__links">
+        <div class="links inline nav links-inline">
+
+          <span class="node-readmore nav-link">
+
+            <span class="btn-sm add-to-cart"
+                  data-nombre="Máquina NESCAFÉ® "
+                  data-modelo="Granita"
+                  data-precio="40000"
+                  data-imagen="granita.png">
+              Agregar
+            </span>
+
+          </span>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+</div>
+
+
+ <div class="field__item">
+<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
+
+  <div class="product-teaser-wrapper-linked">
+
+    <div class="wishlist"></div>
+
+    <div class="product-teaser-image-wrapper">
+
+      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
+
+        <a href="lainex.html" target="_blank">
+          <img loading="lazy"
+               src="lainexs.png"
+               width="452"
+               height="468"
+               alt="Primer plano de la máquina de café NESCAFÉ® Titán"
+               class="image-style-np-product-teaser-2x" />
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="product-teaser-wrapper-content">
+
+      <h3 class="product__title">
+        Máquina de café Lainex NESCAFÉ® - $75,000
+      </h3>
+
+      <div class="inline__links">
+        <div class="links inline nav links-inline">
+
+          <span class="node-readmore nav-link">
+
+            <span class="btn-sm add-to-cart"
+                  data-nombre="Máquina de café NESCAFÉ® "
+                  data-modelo="Lainex"
+                  data-precio="75000"
+                  data-imagen="lainex.png">
+              Agregar
+            </span>
+
+          </span>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+</div>
+
+ 
+          </div>
+  
+                    </div>
+                <div class="related-product-cta">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+      </div>
+</div>
+             
+              <div class="field__item">
+        
+  
+        
+      
+    
+    
+      
+  <div class="compatibility-mode paragraph paragraph--type--c-text paragraph--view-mode--default"
+      style="
+                                                                              "
+      >
+    <div class="twb-grid-limited ">
+                <article class="contextual-region dsu-component-page is-promoted full clearfix" role="article">
+      
+
+        <span class="hidden table-nav-translation-next-col" data-table-nav-translation-next-col="Next column"></span>
+        <span class="hidden table-nav-translation-prev-col" data-table-nav-translation-prev-col="Previous column"></span>
+      </article>
+        </div>
+  </div>
+</div>
+
+
   <div class="compatibility-mode paragraph paragraph--type--c-text paragraph--view-mode--default"
       style="
                                                                               "
@@ -758,707 +1781,6 @@ transition: all .2s ease-in-out;
                           </div>
           </div>
         </div>
-
-        <span class="hidden table-nav-translation-next-col" data-table-nav-translation-next-col="Next column"></span>
-        <span class="hidden table-nav-translation-prev-col" data-table-nav-translation-prev-col="Previous column"></span>
-      </article>
-        </div>
-  </div>
-</div>
-              <div class="field__item">
-        
-  
-        
-      
-    
-    
-      
-  <div class="compatibility-mode paragraph paragraph--type--c-text paragraph--view-mode--default"
-      style="
-                                                                              "
-      >
-    <div class="twb-grid-limited ">
-                <article class="contextual-region dsu-component-page is-promoted full clearfix" role="article">
-        <div class="content twb-narrow">
-          <div class="field field--name-field-components field--type-entity-reference-revisions field--label-hidden field--items">
-            <div class="field--item">
-              <div class="paragraph paragraph--type--c-text paragraph--view-mode--default">
-
-                
-                
-                                  
-                
-                                  
-                
-                                  
-            <div class="clearfix text-formatted field field--name-field-c-text field--type-text-long field--label-hidden field__item"><h2 class="text-align-center highlight"><span lang="ES">Catálogo de máquinas cafeteras para negocio</span></h2><p><span lang="ES"></span></p><p><span lang="ES-CO">Explora nuestra gama de cafeteras para negocio en México, desde modelos espresso profesionales hasta opciones compactas para espacios reducidos. Cada máquina está diseñada para ofrecer calidad, consistencia y el mejor sabor en cada taza, ayudando a que tu negocio destaque.</span></p></div>
-      
-                              </div>
-
-                          </div>
-          </div>
-        </div>
-
-        <span class="hidden table-nav-translation-next-col" data-table-nav-translation-next-col="Next column"></span>
-        <span class="hidden table-nav-translation-prev-col" data-table-nav-translation-prev-col="Previous column"></span>
-      </article>
-        </div>
-  </div>
-</div>
-              <div class="field__item">  <div  class="compatibility-mode full-component-wrapper paragraph-np-related-product" id="catalogo" data-target="">
-                  
-    <div class="paragraph paragraph--type--related-product paragraph--view-mode--teaser-list">
-        <div class="related-product-container twb-grid-limited" data-item-list-id="related_products" data-item-list-name="Related Products">
-            <div class="related-product-wrapper-content">
-                                    <div class="related-product-text">
-                        <div class="field-related-product-title">
-                                                            <h3 class="heading">Máquinas NESCAFÉ® para bebidas </h3>
-                                                    </div>
-                    </div>
-                                    <div class="related-product-products">
-                        
-      <div class="field field--name-field-product field--type-entity-reference field--label-hidden field__items">
-              <div class="field__item">
-<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
-
-  <div class="product-teaser-wrapper-linked">
-
-    <div class="wishlist"></div>
-
-    <div class="product-teaser-image-wrapper">
-
-      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
-
-        <a href="axiom.html" target="_blank">
-          <img loading="lazy"
-               src="axiom.png"
-               width="468"
-               height="468"
-               alt="Primer plano de la máquina de café NESCAFÉ® Axiom"
-               class="image-style-np-product-teaser-2x" />
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="product-teaser-wrapper-content">
-
-      <h3 class="product__title">
-        NESCAFÉ® Axiom - café en grano - $8,000
-      </h3>
-
-      <div class="inline__links">
-        <div class="links inline nav links-inline">
-          <span class="node-readmore nav-link">
-
-            <span class="btn-sm add-to-cart"
-                  data-nombre="Máquina de café NESCAFÉ® "
-                  data-modelo="Axiom"
-                  data-precio="8000"
-                  data-imagen="axiom.png">
-              Agregar
-            </span>
-
-          </span>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</article>
-
-</div>
-
- <div class="field__item">
-
-<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
-
-  <div class="product-teaser-wrapper-linked">
-
-    <div class="wishlist">
-    </div>
-
-    <div class="product-teaser-image-wrapper">
-
-      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
-
-        <a href="boxha.html" target="_blank">
-          <img loading="lazy"
-               src="boxha.png"
-               width="380"
-               height="380"
-               alt="Cafetera profesional NESCAFÉ® Boxha con acabado en acero inoxidable y controles digitales."
-               class="image-style-np-product-teaser-2x" />
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="product-teaser-wrapper-content">
-
-      <h3 class="product__title">
-       NESCAFÉ® Boxha - $12,000
-      </h3>
-
-      <div class="inline__links">
-        <div class="links inline nav links-inline">
-          <span class="node-readmore nav-link">
-
-            <span class="btn-sm add-to-cart"
-                  data-nombre="Máquina de café NESCAFÉ® "
-                  data-modelo="Boxha"
-                  data-precio="12000"
-                  data-imagen="boxha.png">
-              Agregar
-            </span>
-
-          </span>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</article>
-
-
-</div>
-              <div class="field__item">
-<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
-
-  <div class="product-teaser-wrapper-linked">
-
-    <div class="wishlist">
-    </div>
-
-    <div class="product-teaser-image-wrapper">
-
-      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
-
-        <a href="ftp30.html" target="_blank">
-          <img loading="lazy"
-               src="ftp30.png"
-               width="468"
-               height="468"
-               alt="Máquina NESCAFÉ® Fusión Soluble"
-               class="image-style-np-product-teaser-2x" />
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="product-teaser-wrapper-content">
-
-      <h3 class="product__title">
-        NESCAFÉ® FTP 30 E - café soluble - $27,000
-      </h3>
-
-      <div class="inline__links">
-        <div class="links inline nav links-inline">
-          <span class="node-readmore nav-link">
-
-            <span class="btn-sm add-to-cart"
-                  data-nombre=" NESCAFÉ® FTP 30 E"
-                  data-modelo=" Máquina café soluble"
-                  data-precio="27000"
-                  data-imagen="ftp30.png">
-              Agregar
-            </span>
-
-          </span>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</article>
-
-</div>
-
-  <div class="field__item">
-<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
-
-  <div class="product-teaser-wrapper-linked">
-
-    <div class="wishlist"></div>
-
-    <div class="product-teaser-image-wrapper">
-
-      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
-
-        <a href="860.html" style="width: 70%;padding-left: 10%;" target="_blank">
-          <img loading="lazy"
-               src="860.png"
-               />
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="product-teaser-wrapper-content">
-
-      <h3 class="product__title">
-       NESCAFÉ® 8/60 | café soluble  - $23,000
-      </h3>
-
-      <div class="inline__links">
-        <div class="links inline nav links-inline">
-          <span class="node-readmore nav-link">
-
-            <span class="btn-sm add-to-cart"
-                  data-nombre="Máquina NESCAFÉ® "
-                  data-modelo="8/60"
-                  data-precio="23000"
-                  data-imagen="860.png">
-              Agregar
-            </span>
-
-          </span>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</article>
-
-</div>
- <div class="field__item">
-<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
-
-  <div class="product-teaser-wrapper-linked">
-
-    <div class="wishlist"></div>
-
-    <div class="product-teaser-image-wrapper">
-
-      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
-
-        <a href="crane.html" target="_blank">
-          <img loading="lazy"
-               src="crane.png"
-               width="452"
-               height="468"
-               alt="Primer plano de la máquina de café NESCAFÉ® Titán"
-               class="image-style-np-product-teaser-2x" />
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="product-teaser-wrapper-content">
-
-      <h3 class="product__title">
-        NESCAFÉ® CRANE  - café soluble - $17,000
-      </h3>
-
-      <div class="inline__links">
-        <div class="links inline nav links-inline">
-
-          <span class="node-readmore nav-link">
-
-            <span class="btn-sm add-to-cart"
-                  data-nombre="Máquina de café NESCAFÉ® "
-                  data-modelo="Crane"
-                  data-precio="17000"
-                  data-imagen="crane.png">
-              Agregar
-            </span>
-
-          </span>
-
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</article>
-</div> <div class="field__item">
-<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
-
-  <div class="product-teaser-wrapper-linked">
-
-    <div class="wishlist"></div>
-
-    <div class="product-teaser-image-wrapper">
-
-      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
-
-        <a href="hotoverice.html" target="_blank">
-          <img loading="lazy"
-               src="hotoverice.png"
-               width="468"
-               height="468"
-               alt="Primer plano de la máquina NESCAFÉ® Hot Over Ice"
-               class="image-style-np-product-teaser-2x" />
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="product-teaser-wrapper-content">
-
-      <h3 class="product__title">
-        NESCAFÉ® Hot Over Ice - café soluble - $32,000
-      </h3>
-
-      <div class="inline__links">
-        <div class="links inline nav links-inline">
-
-          <span class="node-readmore nav-link">
-
-            <span class="btn-sm add-to-cart"
-                  data-nombre="Máquina NESCAFÉ®"
-                  data-modelo="Hot Over Ice"
-                  data-precio="32000"
-                  data-imagen="hotoverice.png">
-              Agregar
-            </span>
-
-          </span>
-
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</article>
-
-</div>
-              <div class="field__item">
-
-<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
-
-  <div class="product-teaser-wrapper-linked">
-
-    <div class="wishlist"></div>
-
-    <div class="product-teaser-image-wrapper">
-
-      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
-
-        <a href="fts60.html" target="_blank">
-          <img loading="lazy"
-               src="ftp.png"
-               width="312"
-               height="468"
-               alt="Primer plano de la máquina de café NESCAFÉ® Fusión Grano"
-               class="image-style-np-product-teaser-2x" />
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="product-teaser-wrapper-content">
-
-      <h3 class="product__title">
-        NESCAFÉ® FTS 60E - café en grano - $32,000
-      </h3>
-
-      <div class="inline__links">
-        <div class="links inline nav links-inline">
-          <span class="node-readmore nav-link">
-
-            <span class="btn-sm add-to-cart"
-                  data-nombre="Máquina NESCAFÉ® "
-                  data-modelo="FTS 60E "
-                  data-precio="32000"
-                  data-imagen="ftp.png">
-              Agregar
-            </span>
-
-          </span>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</article>
-
-</div>
-             
-            
-              <div class="field__item">
-<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
-
-  <div class="product-teaser-wrapper-linked">
-
-    <div class="wishlist"></div>
-
-    <div class="product-teaser-image-wrapper">
-
-      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
-
-        <a href="mts60e.html" target="_blank">
-          <img loading="lazy"
-               src="mts.png"
-               width="380"
-               height="380"
-               alt="Primer plano de la máquina de café NESCAFÉ® MTS60E"
-               class="image-style-np-product-teaser-2x" />
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="product-teaser-wrapper-content">
-
-      <h3 class="product__title">
-        NESCAFÉ® MTS60E - café en grano - $38,000
-      </h3>
-
-      <div class="inline__links">
-        <div class="links inline nav links-inline">
-          <span class="node-readmore nav-link">
-
-            <span class="btn-sm add-to-cart"
-                  data-nombre="Máquina de café NESCAFÉ® "
-                  data-modelo="MTS60E"
-                  data-precio="38000"
-                  data-imagen="mts.png">
-              Agregar
-            </span>
-
-          </span>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</article>
-
-</div>
-              <div class="field__item">
-<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
-
-  <div class="product-teaser-wrapper-linked">
-
-    <div class="wishlist"></div>
-
-    <div class="product-teaser-image-wrapper">
-
-      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
-
-        <a href="titan.html" target="_blank">
-          <img loading="lazy"
-               src="titan.png"
-               width="452"
-               height="468"
-               alt="Primer plano de la máquina de café NESCAFÉ® Titán"
-               class="image-style-np-product-teaser-2x" />
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="product-teaser-wrapper-content">
-
-      <h3 class="product__title">
-        NESCAFÉ® Titán - café en grano - $40,000
-      </h3>
-
-      <div class="inline__links">
-        <div class="links inline nav links-inline">
-
-          <span class="node-readmore nav-link">
-
-            <span class="btn-sm add-to-cart"
-                  data-nombre="Máquina de café NESCAFÉ® "
-                  data-modelo="Titán"
-                  data-precio="40000"
-                  data-imagen="titan.png">
-              Agregar
-            </span>
-
-          </span>
-
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</article>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
- <div class="field__item">
-<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
-
-  <div class="product-teaser-wrapper-linked">
-
-    <div class="wishlist"></div>
-
-    <div class="product-teaser-image-wrapper">
-
-      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
-
-        <a href="granita.html" target="_blank">
-          <img loading="lazy"
-               src="granita.png"
-               width="468"
-               height="468"
-               alt="Primer plano de la máquina NESCAFÉ® Granita"
-               class="image-style-np-product-teaser-2x" />
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="product-teaser-wrapper-content">
-
-      <h3 class="product__title">
-        NESCAFÉ® Granita - Máquina de frappe - $40,000
-      </h3>
-
-      <div class="inline__links">
-        <div class="links inline nav links-inline">
-
-          <span class="node-readmore nav-link">
-
-            <span class="btn-sm add-to-cart"
-                  data-nombre="Máquina NESCAFÉ® "
-                  data-modelo="Granita"
-                  data-precio="40000"
-                  data-imagen="granita.png">
-              Agregar
-            </span>
-
-          </span>
-
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</article>
-
-</div>
-
-
- <div class="field__item">
-<article class="node node--type-dsu-product node--view-mode-teaser clearfix">
-
-  <div class="product-teaser-wrapper-linked">
-
-    <div class="wishlist"></div>
-
-    <div class="product-teaser-image-wrapper">
-
-      <div class="field field--name-field-media-image field--type-image field--label-hidden field__item">
-
-        <a href="lainex.html" target="_blank">
-          <img loading="lazy"
-               src="lainex.png"
-               width="452"
-               height="468"
-               alt="Primer plano de la máquina de café NESCAFÉ® Titán"
-               class="image-style-np-product-teaser-2x" />
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="product-teaser-wrapper-content">
-
-      <h3 class="product__title">
-        Máquina de café Lainex NESCAFÉ® - $75,000
-      </h3>
-
-      <div class="inline__links">
-        <div class="links inline nav links-inline">
-
-          <span class="node-readmore nav-link">
-
-            <span class="btn-sm add-to-cart"
-                  data-nombre="Máquina de café NESCAFÉ® "
-                  data-modelo="Lainex"
-                  data-precio="75000"
-                  data-imagen="lainex.png">
-              Agregar
-            </span>
-
-          </span>
-
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-
-</article>
-</div>
-
- 
-          </div>
-  
-                    </div>
-                <div class="related-product-cta">
-                    
-                </div>
-            </div>
-        </div>
-    </div>
-      </div>
-</div>
-             
-              <div class="field__item">
-        
-  
-        
-      
-    
-    
-      
-  <div class="compatibility-mode paragraph paragraph--type--c-text paragraph--view-mode--default"
-      style="
-                                                                              "
-      >
-    <div class="twb-grid-limited ">
-                <article class="contextual-region dsu-component-page is-promoted full clearfix" role="article">
-      
 
         <span class="hidden table-nav-translation-next-col" data-table-nav-translation-next-col="Next column"></span>
         <span class="hidden table-nav-translation-prev-col" data-table-nav-translation-prev-col="Previous column"></span>
